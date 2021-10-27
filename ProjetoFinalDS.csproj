@@ -52,6 +52,24 @@
     <Compile Include="FrmAddColecao.Designer.cs">
       <DependentUpon>FrmAddColecao.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddItem.Designer.cs">
+      <DependentUpon>FrmAddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAltColecao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAltColecao.Designer.cs">
+      <DependentUpon>FrmAltColecao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAltItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAltItem.Designer.cs">
+      <DependentUpon>FrmAltItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +88,18 @@
     <Compile Include="FrmColecoes.Designer.cs">
       <DependentUpon>FrmColecoes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEditColecao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditColecao.Designer.cs">
+      <DependentUpon>FrmEditColecao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditItem.Designer.cs">
+      <DependentUpon>FrmEditItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,10 +112,25 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPerfil.Designer.cs">
+      <DependentUpon>FrmPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAddColecao.resx">
       <DependentUpon>FrmAddColecao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddItem.resx">
+      <DependentUpon>FrmAddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAltColecao.resx">
+      <DependentUpon>FrmAltColecao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAltItem.resx">
+      <DependentUpon>FrmAltItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCadastro.resx">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
@@ -96,11 +141,20 @@
     <EmbeddedResource Include="FrmColecoes.resx">
       <DependentUpon>FrmColecoes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditColecao.resx">
+      <DependentUpon>FrmEditColecao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditItem.resx">
+      <DependentUpon>FrmEditItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPerfil.resx">
+      <DependentUpon>FrmPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

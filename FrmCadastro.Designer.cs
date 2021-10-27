@@ -42,7 +42,7 @@ namespace ProjetoFinalDS
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(229, 268);
+            this.textBox2.Location = new System.Drawing.Point(236, 268);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(294, 31);
             this.textBox2.TabIndex = 7;
@@ -51,7 +51,7 @@ namespace ProjetoFinalDS
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(229, 154);
+            this.label2.Location = new System.Drawing.Point(236, 154);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 25);
             this.label2.TabIndex = 6;
@@ -60,7 +60,7 @@ namespace ProjetoFinalDS
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(229, 112);
+            this.textBox1.Location = new System.Drawing.Point(236, 112);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(294, 31);
             this.textBox1.TabIndex = 5;
@@ -69,7 +69,7 @@ namespace ProjetoFinalDS
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(229, 76);
+            this.label1.Location = new System.Drawing.Point(236, 76);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 25);
             this.label1.TabIndex = 4;
@@ -79,7 +79,7 @@ namespace ProjetoFinalDS
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(229, 232);
+            this.label3.Location = new System.Drawing.Point(236, 232);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 25);
             this.label3.TabIndex = 6;
@@ -88,7 +88,7 @@ namespace ProjetoFinalDS
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(229, 190);
+            this.textBox3.Location = new System.Drawing.Point(236, 190);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(294, 31);
             this.textBox3.TabIndex = 7;
@@ -98,7 +98,7 @@ namespace ProjetoFinalDS
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))));
-            this.linkLabel1.Location = new System.Drawing.Point(351, 369);
+            this.linkLabel1.Location = new System.Drawing.Point(358, 369);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(58, 24);
             this.linkLabel1.TabIndex = 9;
@@ -112,7 +112,7 @@ namespace ProjetoFinalDS
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogin.Location = new System.Drawing.Point(297, 324);
+            this.btnLogin.Location = new System.Drawing.Point(304, 324);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(163, 42);
             this.btnLogin.TabIndex = 8;

@@ -1,7 +1,7 @@
 ﻿
 namespace ProjetoFinalDS
 {
-    partial class FrmAddColecao
+    partial class FrmAddItem
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,26 @@ namespace ProjetoFinalDS
         /// </summary>
         private void InitializeComponent()
         {
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))));
+            this.linkLabel1.Location = new System.Drawing.Point(361, 360);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(85, 24);
+            this.linkLabel1.TabIndex = 23;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Cancelar";
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnLogin
             // 
@@ -47,7 +60,7 @@ namespace ProjetoFinalDS
             this.btnLogin.Location = new System.Drawing.Point(321, 315);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(163, 42);
-            this.btnLogin.TabIndex = 16;
+            this.btnLogin.TabIndex = 22;
             this.btnLogin.Text = "Adicionar";
             this.btnLogin.UseVisualStyleBackColor = false;
             // 
@@ -58,7 +71,7 @@ namespace ProjetoFinalDS
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(294, 117);
-            this.textBox3.TabIndex = 14;
+            this.textBox3.TabIndex = 21;
             // 
             // label2
             // 
@@ -67,7 +80,7 @@ namespace ProjetoFinalDS
             this.label2.Location = new System.Drawing.Point(253, 145);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 25);
-            this.label2.TabIndex = 13;
+            this.label2.TabIndex = 20;
             this.label2.Text = "Descrição";
             // 
             // textBox1
@@ -76,7 +89,7 @@ namespace ProjetoFinalDS
             this.textBox1.Location = new System.Drawing.Point(253, 103);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(294, 31);
-            this.textBox1.TabIndex = 11;
+            this.textBox1.TabIndex = 19;
             // 
             // label1
             // 
@@ -84,24 +97,11 @@ namespace ProjetoFinalDS
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(253, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 25);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Nome da coleção";
+            this.label1.Size = new System.Drawing.Size(144, 25);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Nome do item";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))));
-            this.linkLabel1.Location = new System.Drawing.Point(361, 360);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(85, 24);
-            this.linkLabel1.TabIndex = 17;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Cancelar";
-            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // FrmAddColecao
+            // FrmAddItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -112,19 +112,20 @@ namespace ProjetoFinalDS
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Name = "FrmAddColecao";
-            this.Text = "Adicionar nova coleção";
+            this.Name = "FrmAddItem";
+            this.Text = "Adicionar novo item";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
