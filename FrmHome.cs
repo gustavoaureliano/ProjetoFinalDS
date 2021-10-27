@@ -21,7 +21,8 @@ namespace ProjetoFinalDS
         {
             //new FrmLogin().Show();
             //new FrmCadastro().Show();
-            new FrmColecoes().Show();
+            //new FrmColecoes().Show();
+            new FrmAddColecao().Show();
         }
 
     }

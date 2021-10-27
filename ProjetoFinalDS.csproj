@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAddColecao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddColecao.Designer.cs">
+      <DependentUpon>FrmAddColecao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCadastro.Designer.cs">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmColecao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmColecao.Designer.cs">
+      <DependentUpon>FrmColecao.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmColecoes.cs">
       <SubType>Form</SubType>
@@ -72,8 +84,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAddColecao.resx">
+      <DependentUpon>FrmAddColecao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCadastro.resx">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmColecao.resx">
+      <DependentUpon>FrmColecao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmColecoes.resx">
       <DependentUpon>FrmColecoes.cs</DependentUpon>

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetoFinalDS
 {
-    public partial class FrmLogin : Form
+    public partial class FrmAddColecao : Form
     {
-        public FrmLogin()
+        public FrmAddColecao()
         {
             InitializeComponent();
         }
