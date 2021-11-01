@@ -16,5 +16,20 @@ namespace ProjetoFinalDS
         {
             InitializeComponent();
         }
+
+        private void FrmCadastro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

@@ -74,5 +74,6 @@ namespace ProjetoFinalDS
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
     }
 }

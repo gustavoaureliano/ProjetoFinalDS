@@ -30,52 +30,59 @@ namespace ProjetoFinalDS
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.lblSenha = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.linkVoltar = new System.Windows.Forms.LinkLabel();
+            this.imagemLateral = new System.Windows.Forms.PictureBox();
+            this.lblTit = new System.Windows.Forms.Label();
+            this.lblFrase = new System.Windows.Forms.Label();
+            this.lblLinkCadas = new System.Windows.Forms.LinkLabel();
+            this.btnFechar = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.imagemLateral)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblUsuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(399, 137);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Usuário";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(416, 136);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(74, 24);
+            this.lblUsuario.TabIndex = 0;
+            this.lblUsuario.Text = "Usuário";
             // 
-            // textBox1
+            // txtUsuario
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(399, 166);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(353, 31);
-            this.textBox1.TabIndex = 1;
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(416, 165);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(353, 31);
+            this.txtUsuario.TabIndex = 1;
             // 
-            // textBox2
+            // txtSenha
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(399, 245);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(353, 31);
-            this.textBox2.TabIndex = 3;
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(416, 249);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(353, 31);
+            this.txtSenha.TabIndex = 3;
             // 
-            // label2
+            // lblSenha
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(399, 216);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 24);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Senha";
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.Location = new System.Drawing.Point(416, 222);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(65, 24);
+            this.lblSenha.TabIndex = 2;
+            this.lblSenha.Text = "Senha";
             // 
             // btnLogin
             // 
@@ -84,62 +91,133 @@ namespace ProjetoFinalDS
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogin.Location = new System.Drawing.Point(511, 323);
+            this.btnLogin.Location = new System.Drawing.Point(525, 378);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(154, 42);
+            this.btnLogin.Size = new System.Drawing.Size(162, 42);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             // 
-            // linkLabel1
+            // linkVoltar
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))));
-            this.linkLabel1.Location = new System.Drawing.Point(561, 380);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(58, 24);
-            this.linkLabel1.TabIndex = 7;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Voltar";
+            this.linkVoltar.ActiveLinkColor = System.Drawing.Color.Black;
+            this.linkVoltar.AutoSize = true;
+            this.linkVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkVoltar.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))));
+            this.linkVoltar.Location = new System.Drawing.Point(581, 433);
+            this.linkVoltar.Name = "linkVoltar";
+            this.linkVoltar.Size = new System.Drawing.Size(51, 20);
+            this.linkVoltar.TabIndex = 7;
+            this.linkVoltar.TabStop = true;
+            this.linkVoltar.Text = "Voltar";
+            this.linkVoltar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // pictureBox1
+            // imagemLateral
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(358, 450);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.imagemLateral.Dock = System.Windows.Forms.DockStyle.Left;
+            this.imagemLateral.Image = ((System.Drawing.Image)(resources.GetObject("imagemLateral.Image")));
+            this.imagemLateral.Location = new System.Drawing.Point(0, 0);
+            this.imagemLateral.Name = "imagemLateral";
+            this.imagemLateral.Size = new System.Drawing.Size(368, 499);
+            this.imagemLateral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.imagemLateral.TabIndex = 8;
+            this.imagemLateral.TabStop = false;
+            this.imagemLateral.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
-            // label3
+            // lblTit
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(459, 56);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(242, 37);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Faça Seu Login";
+            this.lblTit.AutoSize = true;
+            this.lblTit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTit.Location = new System.Drawing.Point(479, 66);
+            this.lblTit.Name = "lblTit";
+            this.lblTit.Size = new System.Drawing.Size(242, 37);
+            this.lblTit.TabIndex = 9;
+            this.lblTit.Text = "Faça Seu Login";
+            this.lblTit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblFrase
+            // 
+            this.lblFrase.AutoSize = true;
+            this.lblFrase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFrase.Location = new System.Drawing.Point(412, 302);
+            this.lblFrase.Name = "lblFrase";
+            this.lblFrase.Size = new System.Drawing.Size(157, 16);
+            this.lblFrase.TabIndex = 10;
+            this.lblFrase.Text = "Ainda não se cadastrou?";
+            this.lblFrase.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // lblLinkCadas
+            // 
+            this.lblLinkCadas.ActiveLinkColor = System.Drawing.Color.Black;
+            this.lblLinkCadas.AutoSize = true;
+            this.lblLinkCadas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLinkCadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLinkCadas.LinkColor = System.Drawing.Color.MediumSeaGreen;
+            this.lblLinkCadas.Location = new System.Drawing.Point(571, 302);
+            this.lblLinkCadas.Name = "lblLinkCadas";
+            this.lblLinkCadas.Size = new System.Drawing.Size(61, 16);
+            this.lblLinkCadas.TabIndex = 11;
+            this.lblLinkCadas.TabStop = true;
+            this.lblLinkCadas.Text = "cadastro";
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.BackColor = System.Drawing.Color.Black;
+            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
+            this.btnFechar.Location = new System.Drawing.Point(763, 12);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(25, 25);
+            this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnFechar.TabIndex = 12;
+            this.btnFechar.TabStop = false;
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackColor = System.Drawing.Color.Black;
+            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
+            this.btnMinimizar.Location = new System.Drawing.Point(732, 12);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(25, 25);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnMinimizar.TabIndex = 13;
+            this.btnMinimizar.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSize = true;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(800, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(0, 499);
+            this.panel1.TabIndex = 14;
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.linkLabel1);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(800, 499);
+            this.Controls.Add(this.btnMinimizar);
+            this.Controls.Add(this.btnFechar);
+            this.Controls.Add(this.lblLinkCadas);
+            this.Controls.Add(this.lblFrase);
+            this.Controls.Add(this.lblTit);
+            this.Controls.Add(this.imagemLateral);
+            this.Controls.Add(this.linkVoltar);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.lblSenha);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLogin";
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            ((System.ComponentModel.ISupportInitialize)(this.imagemLateral)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,13 +225,18 @@ namespace ProjetoFinalDS
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.LinkLabel linkVoltar;
+        private System.Windows.Forms.PictureBox imagemLateral;
+        private System.Windows.Forms.Label lblTit;
+        private System.Windows.Forms.Label lblFrase;
+        private System.Windows.Forms.LinkLabel lblLinkCadas;
+        private System.Windows.Forms.PictureBox btnFechar;
+        private System.Windows.Forms.PictureBox btnMinimizar;
+        private System.Windows.Forms.Panel panel1;
     }
 }

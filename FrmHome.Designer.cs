@@ -30,26 +30,29 @@ namespace ProjetoFinalDS
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHome));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblPrincipal = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnCadastro = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnMinimizar = new System.Windows.Forms.Button();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnFechar = new System.Windows.Forms.PictureBox();
+            this.logo = new System.Windows.Forms.PictureBox();
+            this.panelTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblPrincipal
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(130, 153);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(555, 77);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bem-Vindo, Usuário!  \r\nEntre e Organize sua Coleção Pessoal!\r\n";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrincipal.Location = new System.Drawing.Point(0, 150);
+            this.lblPrincipal.Name = "lblPrincipal";
+            this.lblPrincipal.Size = new System.Drawing.Size(800, 77);
+            this.lblPrincipal.TabIndex = 0;
+            this.lblPrincipal.Text = "Bem-Vindo, Usuário!  \r\nEntre e Organize sua Coleção Pessoal!\r\n";
+            this.lblPrincipal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblPrincipal.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnLogin
             // 
@@ -58,7 +61,7 @@ namespace ProjetoFinalDS
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogin.Location = new System.Drawing.Point(301, 283);
+            this.btnLogin.Location = new System.Drawing.Point(289, 275);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(234, 47);
             this.btnLogin.TabIndex = 1;
@@ -72,70 +75,60 @@ namespace ProjetoFinalDS
             this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastro.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCadastro.Location = new System.Drawing.Point(301, 357);
+            this.btnCadastro.Location = new System.Drawing.Point(289, 349);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(234, 47);
             this.btnCadastro.TabIndex = 1;
             this.btnCadastro.Text = "Cadastro";
             this.btnCadastro.UseVisualStyleBackColor = false;
             // 
-            // panel1
+            // panelTop
             // 
-            this.panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.panel1.Controls.Add(this.btnMinimizar);
-            this.panel1.Controls.Add(this.btnFechar);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 85);
-            this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panelTop.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panelTop.Controls.Add(this.btnMinimizar);
+            this.panelTop.Controls.Add(this.btnFechar);
+            this.panelTop.Controls.Add(this.logo);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(0, 0);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(800, 85);
+            this.panelTop.TabIndex = 2;
+            this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // btnMinimizar
             // 
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMinimizar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(119)))), ((int)(((byte)(67)))));
-            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.BackColor = System.Drawing.Color.Black;
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(713, 0);
+            this.btnMinimizar.Location = new System.Drawing.Point(732, 30);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(44, 33);
-            this.btnMinimizar.TabIndex = 2;
-            this.btnMinimizar.UseVisualStyleBackColor = true;
+            this.btnMinimizar.Size = new System.Drawing.Size(25, 25);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnMinimizar.TabIndex = 15;
+            this.btnMinimizar.TabStop = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // btnFechar
             // 
-            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFechar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnFechar.FlatAppearance.BorderSize = 0;
-            this.btnFechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(119)))), ((int)(((byte)(67)))));
-            this.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
-            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.BackColor = System.Drawing.Color.Black;
             this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(757, 0);
+            this.btnFechar.Location = new System.Drawing.Point(763, 30);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(44, 33);
-            this.btnFechar.TabIndex = 1;
-            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Size = new System.Drawing.Size(25, 25);
+            this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnFechar.TabIndex = 14;
+            this.btnFechar.TabStop = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
-            // label2
+            // logo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(282, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(235, 42);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Acervo Geek";
-            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label2_MouseMove);
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(330, 0);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(154, 91);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logo.TabIndex = 3;
+            this.logo.TabStop = false;
             // 
             // FrmHome
             // 
@@ -143,31 +136,32 @@ namespace ProjetoFinalDS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelTop);
             this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "FrmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Acervo Geek";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPrincipal;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnCadastro;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnMinimizar;
-        private System.Windows.Forms.Button btnFechar;
+        private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.PictureBox logo;
+        private System.Windows.Forms.PictureBox btnMinimizar;
+        private System.Windows.Forms.PictureBox btnFechar;
     }
 }
 
