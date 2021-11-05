@@ -51,17 +51,17 @@ namespace ProjetoFinalDS
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(416, 136);
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(415, 148);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(74, 24);
+            this.lblUsuario.Size = new System.Drawing.Size(64, 20);
             this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Usuário";
             // 
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(416, 165);
+            this.txtUsuario.Location = new System.Drawing.Point(415, 171);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(353, 31);
             this.txtUsuario.TabIndex = 1;
@@ -69,7 +69,7 @@ namespace ProjetoFinalDS
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(416, 249);
+            this.txtSenha.Location = new System.Drawing.Point(414, 254);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(353, 31);
             this.txtSenha.TabIndex = 3;
@@ -77,10 +77,10 @@ namespace ProjetoFinalDS
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
-            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.Location = new System.Drawing.Point(416, 222);
+            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.Location = new System.Drawing.Point(414, 231);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(65, 24);
+            this.lblSenha.Size = new System.Drawing.Size(56, 20);
             this.lblSenha.TabIndex = 2;
             this.lblSenha.Text = "Senha";
             // 
@@ -89,9 +89,9 @@ namespace ProjetoFinalDS
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(18)))), ((int)(((byte)(6)))));
             this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogin.Location = new System.Drawing.Point(525, 378);
+            this.btnLogin.Location = new System.Drawing.Point(523, 377);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(162, 42);
             this.btnLogin.TabIndex = 5;
@@ -104,7 +104,7 @@ namespace ProjetoFinalDS
             this.linkVoltar.AutoSize = true;
             this.linkVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkVoltar.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))));
-            this.linkVoltar.Location = new System.Drawing.Point(581, 433);
+            this.linkVoltar.Location = new System.Drawing.Point(579, 432);
             this.linkVoltar.Name = "linkVoltar";
             this.linkVoltar.Size = new System.Drawing.Size(51, 20);
             this.linkVoltar.TabIndex = 7;
@@ -128,7 +128,7 @@ namespace ProjetoFinalDS
             // 
             this.lblTit.AutoSize = true;
             this.lblTit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTit.Location = new System.Drawing.Point(479, 66);
+            this.lblTit.Location = new System.Drawing.Point(479, 75);
             this.lblTit.Name = "lblTit";
             this.lblTit.Size = new System.Drawing.Size(242, 37);
             this.lblTit.TabIndex = 9;
@@ -139,7 +139,7 @@ namespace ProjetoFinalDS
             // 
             this.lblFrase.AutoSize = true;
             this.lblFrase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFrase.Location = new System.Drawing.Point(412, 302);
+            this.lblFrase.Location = new System.Drawing.Point(416, 304);
             this.lblFrase.Name = "lblFrase";
             this.lblFrase.Size = new System.Drawing.Size(157, 16);
             this.lblFrase.TabIndex = 10;
@@ -153,7 +153,7 @@ namespace ProjetoFinalDS
             this.lblLinkCadas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblLinkCadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLinkCadas.LinkColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblLinkCadas.Location = new System.Drawing.Point(571, 302);
+            this.lblLinkCadas.Location = new System.Drawing.Point(575, 304);
             this.lblLinkCadas.Name = "lblLinkCadas";
             this.lblLinkCadas.Size = new System.Drawing.Size(61, 16);
             this.lblLinkCadas.TabIndex = 11;

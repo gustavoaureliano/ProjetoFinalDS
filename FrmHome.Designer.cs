@@ -59,7 +59,7 @@ namespace ProjetoFinalDS
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(18)))), ((int)(((byte)(6)))));
             this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnLogin.Location = new System.Drawing.Point(289, 275);
             this.btnLogin.Name = "btnLogin";
@@ -73,7 +73,7 @@ namespace ProjetoFinalDS
             this.btnCadastro.BackColor = System.Drawing.SystemColors.Control;
             this.btnCadastro.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastro.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCadastro.Location = new System.Drawing.Point(289, 349);
             this.btnCadastro.Name = "btnCadastro";

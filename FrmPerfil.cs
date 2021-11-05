@@ -17,6 +17,19 @@ namespace ProjetoFinalDS
             InitializeComponent();
         }
 
+        private void FrmPerfil_Load(object sender, EventArgs e)
+        {
 
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
