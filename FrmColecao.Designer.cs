@@ -107,9 +107,10 @@ namespace ProjetoFinalDS
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button5.BackColor = System.Drawing.Color.Transparent;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.Location = new System.Drawing.Point(699, 30);
             this.button5.Name = "button5";
