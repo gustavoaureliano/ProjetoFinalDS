@@ -140,7 +140,7 @@ namespace ProjetoFinalDS
             // 
             this.lblFrase.AutoSize = true;
             this.lblFrase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFrase.Location = new System.Drawing.Point(416, 304);
+            this.lblFrase.Location = new System.Drawing.Point(411, 298);
             this.lblFrase.Name = "lblFrase";
             this.lblFrase.Size = new System.Drawing.Size(157, 16);
             this.lblFrase.TabIndex = 10;
@@ -154,7 +154,7 @@ namespace ProjetoFinalDS
             this.lblLinkCadas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblLinkCadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLinkCadas.LinkColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblLinkCadas.Location = new System.Drawing.Point(575, 304);
+            this.lblLinkCadas.Location = new System.Drawing.Point(574, 298);
             this.lblLinkCadas.Name = "lblLinkCadas";
             this.lblLinkCadas.Size = new System.Drawing.Size(61, 16);
             this.lblLinkCadas.TabIndex = 11;

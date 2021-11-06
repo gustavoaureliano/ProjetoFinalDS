@@ -37,6 +37,8 @@ namespace ProjetoFinalDS
             //new FrmAddColecao().Show();
             new FrmLogin().Show();
             new FrmEditColecao().Show();
+            new FrmColecoes().Show();
+            new FrmColecao().Show();
 
         }
 
