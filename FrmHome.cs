@@ -36,6 +36,8 @@ namespace ProjetoFinalDS
             //new FrmColecoes().Show();
             //new FrmAddColecao().Show();
             new FrmLogin().Show();
+            new FrmEditColecao().Show();
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -75,5 +77,9 @@ namespace ProjetoFinalDS
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

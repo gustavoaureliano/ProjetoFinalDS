@@ -56,5 +56,10 @@ namespace ProjetoFinalDS
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
