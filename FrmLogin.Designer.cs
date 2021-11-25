@@ -171,6 +171,7 @@ namespace ProjetoFinalDS
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnFechar.TabIndex = 12;
             this.btnFechar.TabStop = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click_1);
             // 
             // btnMinimizar
             // 
@@ -182,6 +183,7 @@ namespace ProjetoFinalDS
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnMinimizar.TabIndex = 13;
             this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // panel1
             // 

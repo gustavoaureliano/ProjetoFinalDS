@@ -139,6 +139,7 @@ namespace ProjetoFinalDS
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnMinimizar.TabIndex = 15;
             this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // btnFechar
             // 
@@ -150,6 +151,7 @@ namespace ProjetoFinalDS
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnFechar.TabIndex = 14;
             this.btnFechar.TabStop = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // logo
             // 
@@ -324,6 +326,7 @@ namespace ProjetoFinalDS
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmColecao";
             this.Text = "Coleçao";
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmColecao_MouseMove);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();

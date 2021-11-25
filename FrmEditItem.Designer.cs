@@ -31,10 +31,10 @@ namespace ProjetoFinalDS
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEditItem));
             this.panelTop = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,6 +64,17 @@ namespace ProjetoFinalDS
             this.panelTop.Size = new System.Drawing.Size(800, 85);
             this.panelTop.TabIndex = 30;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(358, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(174, 33);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Editar - Item";
+            // 
             // btnMinimizar
             // 
             this.btnMinimizar.BackColor = System.Drawing.Color.Black;
@@ -74,6 +85,7 @@ namespace ProjetoFinalDS
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnMinimizar.TabIndex = 15;
             this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // btnFechar
             // 
@@ -85,6 +97,7 @@ namespace ProjetoFinalDS
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnFechar.TabIndex = 14;
             this.btnFechar.TabStop = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // logo
             // 
@@ -95,17 +108,6 @@ namespace ProjetoFinalDS
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logo.TabIndex = 3;
             this.logo.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(358, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(174, 33);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Editar - Item";
             // 
             // label4
             // 
@@ -157,7 +159,7 @@ namespace ProjetoFinalDS
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(531, 168);
+            this.pictureBox1.Location = new System.Drawing.Point(524, 165);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(207, 195);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -168,7 +170,7 @@ namespace ProjetoFinalDS
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(527, 135);
+            this.label1.Location = new System.Drawing.Point(520, 132);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 20);
             this.label1.TabIndex = 50;
@@ -181,7 +183,7 @@ namespace ProjetoFinalDS
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(547, 407);
+            this.button1.Location = new System.Drawing.Point(540, 404);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(178, 42);
             this.button1.TabIndex = 49;
@@ -216,6 +218,7 @@ namespace ProjetoFinalDS
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEditItem";
             this.Text = "Editar Item";
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmEditItem_MouseMove);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();

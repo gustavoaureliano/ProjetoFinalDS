@@ -31,14 +31,6 @@ namespace ProjetoFinalDS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //new FrmLogin().Show();
-            //new FrmCadastro().Show();
-            //new FrmColecoes().Show();
-            //new FrmAddColecao().Show();
-            new FrmLogin().Show();
-            new FrmEditColecao().Show();
-            new FrmColecoes().Show();
-            new FrmColecao().Show();
 
         }
 
@@ -81,7 +73,14 @@ namespace ProjetoFinalDS
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            FrmLogin frmlogin = new FrmLogin();
+            frmlogin.Show();
+        }
 
+        private void btnCadastro_Click(object sender, EventArgs e)
+        {
+            FrmCadastro frmCadastro = new FrmCadastro();
+            frmCadastro.Show();
         }
     }
 }

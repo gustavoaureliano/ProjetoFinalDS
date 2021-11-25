@@ -46,7 +46,7 @@ namespace ProjetoFinalDS
             // lblPrincipal
             // 
             this.lblPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrincipal.Location = new System.Drawing.Point(0, 150);
+            this.lblPrincipal.Location = new System.Drawing.Point(0, 158);
             this.lblPrincipal.Name = "lblPrincipal";
             this.lblPrincipal.Size = new System.Drawing.Size(800, 77);
             this.lblPrincipal.TabIndex = 0;
@@ -61,7 +61,7 @@ namespace ProjetoFinalDS
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogin.Location = new System.Drawing.Point(289, 275);
+            this.btnLogin.Location = new System.Drawing.Point(293, 296);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(234, 47);
             this.btnLogin.TabIndex = 1;
@@ -76,12 +76,13 @@ namespace ProjetoFinalDS
             this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastro.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCadastro.Location = new System.Drawing.Point(289, 349);
+            this.btnCadastro.Location = new System.Drawing.Point(293, 370);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(234, 47);
             this.btnCadastro.TabIndex = 1;
             this.btnCadastro.Text = "Cadastro";
             this.btnCadastro.UseVisualStyleBackColor = false;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // panelTop
             // 
@@ -136,7 +137,7 @@ namespace ProjetoFinalDS
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 474);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.btnLogin);
