@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.25.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dao\CategoriaDAO.cs" />
+    <Compile Include="dao\ColecaoDAO.cs" />
+    <Compile Include="dao\ConexaoBD.cs" />
+    <Compile Include="dao\ItemDAO.cs" />
+    <Compile Include="dao\UsuarioDAO.cs" />
     <Compile Include="FrmAddColecao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,10 @@
     <Compile Include="FrmPerfil.Designer.cs">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="model\Categoria.cs" />
+    <Compile Include="model\Colecao.cs" />
+    <Compile Include="model\Item.cs" />
+    <Compile Include="model\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAddColecao.resx">
@@ -178,9 +188,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="dao\" />
-    <Folder Include="model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
