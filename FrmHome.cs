@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace ProjetoFinalDS
 {
@@ -22,7 +23,8 @@ namespace ProjetoFinalDS
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-
+        Thread t1;
+        Thread t2;
 
         public FrmHome()
         {
@@ -73,14 +75,28 @@ namespace ProjetoFinalDS
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            FrmLogin frmlogin = new FrmLogin();
-            frmlogin.Show();
+            this.Close();
+            t1 = new Thread(abrirLogin);
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
+
+        }
+
+        private void abrirLogin(Object obj)
+        {
+            Application.Run(new FrmLogin());
         }
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            FrmCadastro frmCadastro = new FrmCadastro();
-            frmCadastro.Show();
+            this.Close();
+            t2 = new Thread(abrirCadastro);
+            t2.Start();
         }
+
+        private void abrirCadastro(Object obj){
+            Application.Run(new FrmCadastro());
+        }
+
     }
 }

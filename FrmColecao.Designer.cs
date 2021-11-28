@@ -46,9 +46,9 @@ namespace ProjetoFinalDS
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnAdicionarItem = new System.Windows.Forms.Button();
+            this.btnAlterarItem = new System.Windows.Forms.Button();
+            this.btnAcervoGeek = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTop.SuspendLayout();
@@ -187,9 +187,9 @@ namespace ProjetoFinalDS
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.btnAdicionarItem);
+            this.panel2.Controls.Add(this.btnAlterarItem);
+            this.panel2.Controls.Add(this.btnAcervoGeek);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(0, 84);
@@ -235,59 +235,60 @@ namespace ProjetoFinalDS
             this.label2.TabIndex = 66;
             this.label2.Text = "Última Atualização:";
             // 
-            // button1
+            // btnAdicionarItem
             // 
-            this.button1.BackColor = System.Drawing.Color.LightSlateGray;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 144);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 34);
-            this.button1.TabIndex = 63;
-            this.button1.Text = "Adicionar Item";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAdicionarItem.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnAdicionarItem.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAdicionarItem.FlatAppearance.BorderSize = 0;
+            this.btnAdicionarItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdicionarItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarItem.ForeColor = System.Drawing.Color.Black;
+            this.btnAdicionarItem.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionarItem.Image")));
+            this.btnAdicionarItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdicionarItem.Location = new System.Drawing.Point(12, 144);
+            this.btnAdicionarItem.Name = "btnAdicionarItem";
+            this.btnAdicionarItem.Size = new System.Drawing.Size(177, 34);
+            this.btnAdicionarItem.TabIndex = 63;
+            this.btnAdicionarItem.Text = "Adicionar Item";
+            this.btnAdicionarItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdicionarItem.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnAlterarItem
             // 
-            this.button2.BackColor = System.Drawing.Color.LightSlateGray;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 193);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(152, 34);
-            this.button2.TabIndex = 64;
-            this.button2.Text = "Alterar Item";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAlterarItem.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnAlterarItem.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAlterarItem.FlatAppearance.BorderSize = 0;
+            this.btnAlterarItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterarItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterarItem.ForeColor = System.Drawing.Color.Black;
+            this.btnAlterarItem.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterarItem.Image")));
+            this.btnAlterarItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterarItem.Location = new System.Drawing.Point(12, 193);
+            this.btnAlterarItem.Name = "btnAlterarItem";
+            this.btnAlterarItem.Size = new System.Drawing.Size(152, 34);
+            this.btnAlterarItem.TabIndex = 64;
+            this.btnAlterarItem.Text = "Alterar Item";
+            this.btnAlterarItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAlterarItem.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnAcervoGeek
             // 
-            this.button4.BackColor = System.Drawing.Color.LightSlateGray;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(12, 233);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(168, 55);
-            this.button4.TabIndex = 65;
-            this.button4.Text = "Acervo Geek";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnAcervoGeek.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnAcervoGeek.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAcervoGeek.FlatAppearance.BorderSize = 0;
+            this.btnAcervoGeek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcervoGeek.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcervoGeek.ForeColor = System.Drawing.Color.Black;
+            this.btnAcervoGeek.Image = ((System.Drawing.Image)(resources.GetObject("btnAcervoGeek.Image")));
+            this.btnAcervoGeek.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAcervoGeek.Location = new System.Drawing.Point(12, 233);
+            this.btnAcervoGeek.Name = "btnAcervoGeek";
+            this.btnAcervoGeek.Size = new System.Drawing.Size(168, 55);
+            this.btnAcervoGeek.TabIndex = 65;
+            this.btnAcervoGeek.Text = "Acervo Geek";
+            this.btnAcervoGeek.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAcervoGeek.UseVisualStyleBackColor = false;
+            this.btnAcervoGeek.Click += new System.EventHandler(this.btnAcervoGeek_Click);
             // 
             // pictureBox1
             // 
@@ -355,9 +356,9 @@ namespace ProjetoFinalDS
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAdicionarItem;
+        private System.Windows.Forms.Button btnAlterarItem;
+        private System.Windows.Forms.Button btnAcervoGeek;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

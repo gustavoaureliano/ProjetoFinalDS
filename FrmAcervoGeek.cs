@@ -1,5 +1,4 @@
-﻿using ProjetoFinalDS.model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,11 +8,10 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Threading;
 
 namespace ProjetoFinalDS
 {
-    public partial class FrmColecoes : Form
+    public partial class FrmAcervoGeek : Form
     {
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -23,29 +21,9 @@ namespace ProjetoFinalDS
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        Thread t1;
-
-        private Usuario usuario;
-        public FrmColecoes(Usuario usuario)
+        public FrmAcervoGeek()
         {
             InitializeComponent();
-            this.usuario = usuario;
-        }
-
-
-        private void FrmColecoes_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -53,24 +31,18 @@ namespace ProjetoFinalDS
             this.Close();
         }
 
-        private void FrmColecoes_MouseMove(object sender, MouseEventArgs e)
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void FrmAcervoGeek_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
-        }
-
-        private void btnAcervoGeek_Click(object sender, EventArgs e)
-        {
-            t1 = new Thread(abriAcervo);
-            t1.Start();
-        }
-
-        private void abriAcervo(Object obj)
-        {
-            Application.Run(new FrmAcervoGeek());
         }
     }
 }

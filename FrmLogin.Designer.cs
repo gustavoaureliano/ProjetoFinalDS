@@ -160,6 +160,7 @@ namespace ProjetoFinalDS
             this.lblLinkCadas.TabIndex = 11;
             this.lblLinkCadas.TabStop = true;
             this.lblLinkCadas.Text = "cadastro";
+            this.lblLinkCadas.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLinkCadas_LinkClicked);
             // 
             // btnFechar
             // 

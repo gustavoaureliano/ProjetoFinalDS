@@ -8,6 +8,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using ProjetoFinalDS.dao;
+using ProjetoFinalDS.model;
 
 namespace ProjetoFinalDS
 {
@@ -21,6 +24,9 @@ namespace ProjetoFinalDS
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
+
+        Thread t1;
+        Thread t2;
 
         public FrmCadastro()
         {
@@ -37,13 +43,28 @@ namespace ProjetoFinalDS
 
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            UsuarioDAO usuarioDao = new UsuarioDAO();
+            Usuario usuario = new Usuario();
+
+            String usu = txtUsuario.Text.Trim();
+            String nome = txtNome.Text.Trim();
+            String senha = txtSenha.Text.Trim();
+
+            if (usu == "" || nome == "" || senha == "")
+            {
+                MessageBox.Show("Algo de errado não está certo \nAlgum espaço não foi preenchido", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                usuario.setUsuario(txtUsuario.Text);
+                usuario.setNome(txtNome.Text);
+                usuario.setSenha(txtSenha.Text);
+
+                usuarioDao.cadastrarUsuario(usuario);
+            }
 
         }
 
@@ -65,6 +86,30 @@ namespace ProjetoFinalDS
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void linkVoltar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            t1 = new Thread(voltarHome);
+            t1.Start();
+        }
+
+        private void voltarHome()
+        {
+            Application.Run(new FrmHome());
+        }
+
+        private void lblLinkLog_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            t2 = new Thread(abrirLog);
+            t2.Start();
+        }
+
+        private void abrirLog()
+        {
+            Application.Run(new FrmLogin());
         }
     }
 }

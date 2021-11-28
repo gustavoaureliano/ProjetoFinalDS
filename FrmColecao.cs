@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace ProjetoFinalDS
 {
@@ -21,6 +22,8 @@ namespace ProjetoFinalDS
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
+
+        Thread t1;
 
         public FrmColecao()
         {
@@ -44,6 +47,17 @@ namespace ProjetoFinalDS
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void btnAcervoGeek_Click(object sender, EventArgs e)
+        {
+            t1 = new Thread(abriAcervo);
+            t1.Start();
+        }
+
+        private void abriAcervo(Object obj)
+        {
+            Application.Run(new FrmAcervoGeek());
         }
     }
 }

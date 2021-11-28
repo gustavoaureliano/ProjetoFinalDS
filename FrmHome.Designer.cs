@@ -125,7 +125,7 @@ namespace ProjetoFinalDS
             // logo
             // 
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(330, 0);
+            this.logo.Location = new System.Drawing.Point(340, 0);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(154, 91);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

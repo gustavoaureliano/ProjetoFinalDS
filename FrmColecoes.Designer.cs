@@ -33,9 +33,9 @@ namespace ProjetoFinalDS
             this.listView1 = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnAdicionarColecao = new System.Windows.Forms.Button();
+            this.btnAlterarColecao = new System.Windows.Forms.Button();
+            this.btnAcervoGeek = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
@@ -85,60 +85,61 @@ namespace ProjetoFinalDS
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnAdicionarColecao
             // 
-            this.button1.BackColor = System.Drawing.Color.LightSlateGray;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 144);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 34);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Adicionar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAdicionarColecao.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnAdicionarColecao.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAdicionarColecao.FlatAppearance.BorderSize = 0;
+            this.btnAdicionarColecao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdicionarColecao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarColecao.ForeColor = System.Drawing.Color.Black;
+            this.btnAdicionarColecao.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionarColecao.Image")));
+            this.btnAdicionarColecao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdicionarColecao.Location = new System.Drawing.Point(12, 144);
+            this.btnAdicionarColecao.Name = "btnAdicionarColecao";
+            this.btnAdicionarColecao.Size = new System.Drawing.Size(140, 34);
+            this.btnAdicionarColecao.TabIndex = 3;
+            this.btnAdicionarColecao.Text = "Adicionar";
+            this.btnAdicionarColecao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdicionarColecao.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnAlterarColecao
             // 
-            this.button2.BackColor = System.Drawing.Color.LightSlateGray;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 193);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 34);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Alterar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnAlterarColecao.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnAlterarColecao.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAlterarColecao.FlatAppearance.BorderSize = 0;
+            this.btnAlterarColecao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterarColecao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterarColecao.ForeColor = System.Drawing.Color.Black;
+            this.btnAlterarColecao.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterarColecao.Image")));
+            this.btnAlterarColecao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterarColecao.Location = new System.Drawing.Point(12, 193);
+            this.btnAlterarColecao.Name = "btnAlterarColecao";
+            this.btnAlterarColecao.Size = new System.Drawing.Size(112, 34);
+            this.btnAlterarColecao.TabIndex = 4;
+            this.btnAlterarColecao.Text = "Alterar";
+            this.btnAlterarColecao.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnAlterarColecao.UseVisualStyleBackColor = false;
+            this.btnAlterarColecao.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button4
+            // btnAcervoGeek
             // 
-            this.button4.BackColor = System.Drawing.Color.LightSlateGray;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(12, 233);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(168, 55);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Acervo Geek";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnAcervoGeek.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnAcervoGeek.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAcervoGeek.FlatAppearance.BorderSize = 0;
+            this.btnAcervoGeek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcervoGeek.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcervoGeek.ForeColor = System.Drawing.Color.Black;
+            this.btnAcervoGeek.Image = ((System.Drawing.Image)(resources.GetObject("btnAcervoGeek.Image")));
+            this.btnAcervoGeek.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAcervoGeek.Location = new System.Drawing.Point(12, 233);
+            this.btnAcervoGeek.Name = "btnAcervoGeek";
+            this.btnAcervoGeek.Size = new System.Drawing.Size(168, 55);
+            this.btnAcervoGeek.TabIndex = 12;
+            this.btnAcervoGeek.Text = "Acervo Geek";
+            this.btnAcervoGeek.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAcervoGeek.UseVisualStyleBackColor = false;
+            this.btnAcervoGeek.Click += new System.EventHandler(this.btnAcervoGeek_Click);
             // 
             // panelTop
             // 
@@ -152,6 +153,7 @@ namespace ProjetoFinalDS
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(832, 85);
             this.panelTop.TabIndex = 42;
+            this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmColecoes_MouseMove);
             // 
             // label3
             // 
@@ -233,13 +235,14 @@ namespace ProjetoFinalDS
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnAdicionarColecao);
+            this.panel1.Controls.Add(this.btnAlterarColecao);
+            this.panel1.Controls.Add(this.btnAcervoGeek);
             this.panel1.Location = new System.Drawing.Point(0, 82);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(189, 549);
             this.panel1.TabIndex = 46;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmColecoes_MouseMove);
             // 
             // FrmColecoes
             // 
@@ -274,9 +277,9 @@ namespace ProjetoFinalDS
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAdicionarColecao;
+        private System.Windows.Forms.Button btnAlterarColecao;
+        private System.Windows.Forms.Button btnAcervoGeek;
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox btnMinimizar;

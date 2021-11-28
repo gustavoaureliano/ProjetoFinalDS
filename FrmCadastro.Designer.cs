@@ -62,7 +62,7 @@ namespace ProjetoFinalDS
             this.lblLinkLog.TabIndex = 21;
             this.lblLinkLog.TabStop = true;
             this.lblLinkLog.Text = "login";
-            this.lblLinkLog.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.lblLinkLog.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLinkLog_LinkClicked);
             // 
             // lblFrase2
             // 
@@ -109,6 +109,7 @@ namespace ProjetoFinalDS
             this.linkVoltar.TabIndex = 23;
             this.linkVoltar.TabStop = true;
             this.linkVoltar.Text = "Voltar";
+            this.linkVoltar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkVoltar_LinkClicked);
             // 
             // btnCadastrar
             // 

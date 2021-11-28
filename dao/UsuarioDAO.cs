@@ -27,11 +27,11 @@ namespace ProjetoFinalDS.dao
                 MySqlCommand command = new MySqlCommand(sqlInsert, conn);
                 command.CommandType = CommandType.StoredProcedure;
 
-                command.Parameters.AddWithValue("@usuario", usuario.getIdUsuario());
+                command.Parameters.AddWithValue("@usuario", usuario.getUsuario());
                 command.Parameters.AddWithValue("@nome", usuario.getNome());
                 command.Parameters.AddWithValue("@senha", usuario.getSenha());
 
-                Image imagem = usuario.getImagem();
+                /*Image imagem = usuario.getImagem();
 
                 MemoryStream mstream = new MemoryStream();
                 imagem.Save(mstream, imagem.RawFormat);
@@ -40,9 +40,9 @@ namespace ProjetoFinalDS.dao
                 BinaryReader br = new BinaryReader(mstream);
                 byte[] imgByte = null;
 
-                imgByte = br.ReadBytes((int)mstream.Length);
+                imgByte = br.ReadBytes((int)mstream.Length);*/
 
-                command.Parameters.AddWithValue("@foto", imgByte);
+                command.Parameters.AddWithValue("@foto", null);
 
                 try
                 {
@@ -72,6 +72,50 @@ namespace ProjetoFinalDS.dao
 
                 MySqlCommand command = new MySqlCommand(sqlSelect, conn);
                 command.Parameters.AddWithValue("@idUsuario", usuario.getIdUsuario());
+
+                MySqlDataReader reader;
+
+                try
+                {
+                    reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        usuario.setIdUsuario(int.Parse(reader["idUsuario"].ToString()));
+                        usuario.setUsuario(reader["usuario"].ToString());
+                        usuario.setNome(reader["nome"].ToString());
+                        usuario.setSenha(reader["senha"].ToString());
+
+                        byte[] img = (byte[])(reader["foto"]);
+
+                        if (img != null)
+                        {
+                            MemoryStream mstream = new MemoryStream(img);
+                            Image imagem = Image.FromStream(mstream);
+                            usuario.setImagem(imagem);
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Erro: " + e.ToString());
+                }
+                finally
+                {
+                    ConexaoBD.fecharConexao();
+                }
+
+            }
+            return usuario;
+        }
+
+        public Usuario buscarLogin(Usuario usuario)
+        {
+            if (conn.State == ConnectionState.Open)
+            {
+                String sqlSelect = "select * from usuario where usuario = @usuario";
+
+                MySqlCommand command = new MySqlCommand(sqlSelect, conn);
+                command.Parameters.AddWithValue("@usuario", usuario.getUsuario());
 
                 MySqlDataReader reader;
 
@@ -175,7 +219,7 @@ namespace ProjetoFinalDS.dao
                     reader = command.ExecuteReader();
                     if (reader.Read())
                     {
-                        status = Convert.ToBoolean(int.Parse(reader[1].ToString()));
+                        status = Convert.ToBoolean(int.Parse(reader[0].ToString()));
                     }
                 }
                 catch (Exception e)

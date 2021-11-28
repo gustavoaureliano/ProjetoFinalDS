@@ -92,14 +92,15 @@ namespace ProjetoFinalDS.dao
             }
         }
 
-        public List<Colecao> buscarTodos()
+        public List<Colecao> buscarTodos(Usuario usuario)
         {
             List<Colecao> colecoes = new List<Colecao>();
             if (conn.State == ConnectionState.Open)
             {
-                String sqlSelectAll = "select * from colecao";
+                String sqlSelectAll = "select * from colecao where idUsuario = @idUsuario";
 
                 MySqlCommand command = new MySqlCommand(sqlSelectAll, conn);
+                command.Parameters.AddWithValue("@idUsuario", usuario.getIdUsuario());
 
                 MySqlDataReader reader;
 

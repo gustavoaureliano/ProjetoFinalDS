@@ -8,6 +8,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using ProjetoFinalDS.dao;
+using ProjetoFinalDS.model;
 
 namespace ProjetoFinalDS
 {
@@ -22,9 +25,13 @@ namespace ProjetoFinalDS
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        public FrmPerfil()
+        Thread t1;
+        private Usuario usuario;
+
+        public FrmPerfil(Usuario usuario)
         {
             InitializeComponent();
+            this.usuario = usuario;
         }
 
         private void FrmPerfil_Load(object sender, EventArgs e)
@@ -42,10 +49,6 @@ namespace ProjetoFinalDS
 
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
@@ -64,6 +67,24 @@ namespace ProjetoFinalDS
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            UsuarioDAO usuarioDao = new UsuarioDAO();
+
+            usuario.setNome(txtNome.Text.ToString());
+            usuario.setUsuario(txtUsuario.Text.ToString());
+            usuario.setSenha(txtSenha.Text.ToString());
+            usuario.setImagem(imagemPerfil.Image);
+
+            usuarioDao.atualizar(usuario);
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoFinalDS.model
 {
-    class Usuario
+    public class Usuario
     {
 
         int idUsuario;
