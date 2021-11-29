@@ -114,7 +114,7 @@ namespace ProjetoFinalDS
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(89, 205);
+            this.label4.Location = new System.Drawing.Point(89, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 20);
             this.label4.TabIndex = 33;
@@ -141,10 +141,10 @@ namespace ProjetoFinalDS
             // txtDescricao
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.Location = new System.Drawing.Point(89, 240);
+            this.txtDescricao.Location = new System.Drawing.Point(89, 230);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(294, 182);
+            this.txtDescricao.Size = new System.Drawing.Size(294, 117);
             this.txtDescricao.TabIndex = 34;
             // 
             // pbImagem
@@ -156,6 +156,7 @@ namespace ProjetoFinalDS
             this.pbImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImagem.TabIndex = 51;
             this.pbImagem.TabStop = false;
+            this.pbImagem.Click += new System.EventHandler(this.pbImagem_Click);
             this.pbImagem.DragDrop += new System.Windows.Forms.DragEventHandler(this.pbImagem_DragDrop);
             this.pbImagem.DragEnter += new System.Windows.Forms.DragEventHandler(this.pbImagem_DragEnter);
             // 
@@ -176,7 +177,7 @@ namespace ProjetoFinalDS
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSalvar.Location = new System.Drawing.Point(540, 404);
+            this.btnSalvar.Location = new System.Drawing.Point(553, 416);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(178, 42);
             this.btnSalvar.TabIndex = 49;
@@ -186,13 +187,17 @@ namespace ProjetoFinalDS
             // 
             // btnInserirImagem
             // 
-            this.btnInserirImagem.Location = new System.Drawing.Point(597, 349);
+            this.btnInserirImagem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnInserirImagem.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnInserirImagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInserirImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserirImagem.ForeColor = System.Drawing.Color.Black;
+            this.btnInserirImagem.Location = new System.Drawing.Point(589, 354);
             this.btnInserirImagem.Name = "btnInserirImagem";
-            this.btnInserirImagem.Size = new System.Drawing.Size(75, 23);
-            this.btnInserirImagem.TabIndex = 53;
+            this.btnInserirImagem.Size = new System.Drawing.Size(97, 27);
+            this.btnInserirImagem.TabIndex = 74;
             this.btnInserirImagem.Text = "Inserir foto";
-            this.btnInserirImagem.UseVisualStyleBackColor = true;
-            this.btnInserirImagem.Click += new System.EventHandler(this.btnInserirImagem_Click);
+            this.btnInserirImagem.UseVisualStyleBackColor = false;
             // 
             // FrmEditItem
             // 

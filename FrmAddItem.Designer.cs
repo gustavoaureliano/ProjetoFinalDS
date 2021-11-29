@@ -30,52 +30,43 @@ namespace ProjetoFinalDS
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddItem));
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbImagemItem = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnInserirFoto = new System.Windows.Forms.Button();
+            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagemItem)).BeginInit();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // pbImagemItem
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 24;
-            this.comboBox1.Location = new System.Drawing.Point(89, 222);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(294, 32);
-            this.comboBox1.TabIndex = 62;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(531, 169);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(207, 195);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 61;
-            this.pictureBox1.TabStop = false;
+            this.pbImagemItem.Image = ((System.Drawing.Image)(resources.GetObject("pbImagemItem.Image")));
+            this.pbImagemItem.Location = new System.Drawing.Point(507, 171);
+            this.pbImagemItem.Name = "pbImagemItem";
+            this.pbImagemItem.Size = new System.Drawing.Size(207, 195);
+            this.pbImagemItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImagemItem.TabIndex = 61;
+            this.pbImagemItem.TabStop = false;
+            this.pbImagemItem.DragDrop += new System.Windows.Forms.DragEventHandler(this.pbImagemItem_DragDrop);
+            this.pbImagemItem.DragEnter += new System.Windows.Forms.DragEventHandler(this.pbImagemItem_DragEnter);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(527, 136);
+            this.label1.Location = new System.Drawing.Point(503, 138);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 20);
             this.label1.TabIndex = 60;
@@ -88,7 +79,7 @@ namespace ProjetoFinalDS
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSalvar.Location = new System.Drawing.Point(547, 408);
+            this.btnSalvar.Location = new System.Drawing.Point(152, 406);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(178, 42);
             this.btnSalvar.TabIndex = 59;
@@ -96,42 +87,13 @@ namespace ProjetoFinalDS
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // label2
+            // txtNome
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(89, 199);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
-            this.label2.TabIndex = 58;
-            this.label2.Text = "Categoria";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(89, 306);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(294, 117);
-            this.textBox2.TabIndex = 57;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(89, 283);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 20);
-            this.label4.TabIndex = 56;
-            this.label4.Text = "Descrição";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(89, 145);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(294, 29);
-            this.textBox4.TabIndex = 55;
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(89, 145);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(294, 29);
+            this.txtNome.TabIndex = 55;
             // 
             // label5
             // 
@@ -202,19 +164,52 @@ namespace ProjetoFinalDS
             this.logo.TabIndex = 3;
             this.logo.TabStop = false;
             // 
+            // btnInserirFoto
+            // 
+            this.btnInserirFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnInserirFoto.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnInserirFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInserirFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserirFoto.ForeColor = System.Drawing.Color.Black;
+            this.btnInserirFoto.Location = new System.Drawing.Point(563, 393);
+            this.btnInserirFoto.Name = "btnInserirFoto";
+            this.btnInserirFoto.Size = new System.Drawing.Size(97, 27);
+            this.btnInserirFoto.TabIndex = 73;
+            this.btnInserirFoto.Text = "Inserir foto";
+            this.btnInserirFoto.UseVisualStyleBackColor = false;
+            this.btnInserirFoto.Click += new System.EventHandler(this.btnInserirFoto_Click);
+            // 
+            // txtDesc
+            // 
+            this.txtDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDesc.Location = new System.Drawing.Point(89, 223);
+            this.txtDesc.Multiline = true;
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(294, 117);
+            this.txtDesc.TabIndex = 75;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(89, 200);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 20);
+            this.label2.TabIndex = 74;
+            this.label2.Text = "Descrição";
+            // 
             // FrmAddItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 491);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtDesc);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnInserirFoto);
+            this.Controls.Add(this.pbImagemItem);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -222,7 +217,7 @@ namespace ProjetoFinalDS
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar novo item";
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAddItem_MouseMove);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagemItem)).EndInit();
             this.panelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
@@ -233,20 +228,18 @@ namespace ProjetoFinalDS
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbImagemItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.PictureBox logo;
+        private System.Windows.Forms.Button btnInserirFoto;
+        private System.Windows.Forms.TextBox txtDesc;
+        private System.Windows.Forms.Label label2;
     }
 }

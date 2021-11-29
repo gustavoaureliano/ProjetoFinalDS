@@ -53,7 +53,7 @@ namespace ProjetoFinalDS
             // pbImagemColec
             // 
             this.pbImagemColec.Image = ((System.Drawing.Image)(resources.GetObject("pbImagemColec.Image")));
-            this.pbImagemColec.Location = new System.Drawing.Point(519, 157);
+            this.pbImagemColec.Location = new System.Drawing.Point(507, 171);
             this.pbImagemColec.Name = "pbImagemColec";
             this.pbImagemColec.Size = new System.Drawing.Size(207, 195);
             this.pbImagemColec.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -66,7 +66,7 @@ namespace ProjetoFinalDS
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(515, 124);
+            this.label1.Location = new System.Drawing.Point(503, 138);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 20);
             this.label1.TabIndex = 70;
@@ -79,7 +79,7 @@ namespace ProjetoFinalDS
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSalvar.Location = new System.Drawing.Point(153, 414);
+            this.btnSalvar.Location = new System.Drawing.Point(152, 406);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(178, 42);
             this.btnSalvar.TabIndex = 69;
@@ -90,7 +90,7 @@ namespace ProjetoFinalDS
             // txtDesc
             // 
             this.txtDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDesc.Location = new System.Drawing.Point(89, 221);
+            this.txtDesc.Location = new System.Drawing.Point(89, 223);
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(294, 117);
@@ -100,7 +100,7 @@ namespace ProjetoFinalDS
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(89, 198);
+            this.label4.Location = new System.Drawing.Point(89, 200);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 20);
             this.label4.TabIndex = 66;
@@ -189,7 +189,7 @@ namespace ProjetoFinalDS
             this.btnInserirFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInserirFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserirFoto.ForeColor = System.Drawing.Color.Black;
-            this.btnInserirFoto.Location = new System.Drawing.Point(575, 379);
+            this.btnInserirFoto.Location = new System.Drawing.Point(563, 393);
             this.btnInserirFoto.Name = "btnInserirFoto";
             this.btnInserirFoto.Size = new System.Drawing.Size(97, 27);
             this.btnInserirFoto.TabIndex = 72;

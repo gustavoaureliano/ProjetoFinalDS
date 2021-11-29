@@ -123,5 +123,10 @@ namespace ProjetoFinalDS
                 item.setImagem(img);
             }
         }
+
+        private void pbImagem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

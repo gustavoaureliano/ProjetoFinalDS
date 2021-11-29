@@ -79,7 +79,7 @@ namespace ProjetoFinalDS
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSalvar.Location = new System.Drawing.Point(540, 408);
+            this.btnSalvar.Location = new System.Drawing.Point(553, 416);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(178, 42);
             this.btnSalvar.TabIndex = 46;
@@ -186,13 +186,17 @@ namespace ProjetoFinalDS
             // 
             // btnInserirImagem
             // 
-            this.btnInserirImagem.Location = new System.Drawing.Point(600, 341);
+            this.btnInserirImagem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnInserirImagem.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnInserirImagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInserirImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserirImagem.ForeColor = System.Drawing.Color.Black;
+            this.btnInserirImagem.Location = new System.Drawing.Point(589, 354);
             this.btnInserirImagem.Name = "btnInserirImagem";
-            this.btnInserirImagem.Size = new System.Drawing.Size(75, 23);
-            this.btnInserirImagem.TabIndex = 49;
+            this.btnInserirImagem.Size = new System.Drawing.Size(97, 27);
+            this.btnInserirImagem.TabIndex = 75;
             this.btnInserirImagem.Text = "Inserir foto";
-            this.btnInserirImagem.UseVisualStyleBackColor = true;
-            this.btnInserirImagem.Click += new System.EventHandler(this.btnInserirImagem_Click);
+            this.btnInserirImagem.UseVisualStyleBackColor = false;
             // 
             // FrmEditColecao
             // 
