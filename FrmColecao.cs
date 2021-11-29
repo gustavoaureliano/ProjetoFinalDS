@@ -52,6 +52,7 @@ namespace ProjetoFinalDS
             {
                 pbUsuario.Image = (Image)resources.GetObject("usuario");
             }
+
             pbUsuario.Image = usuario.getImagem();
             lblNomeColecao.Text = "Coleção - " + colecao.getNome();
             String dataFormat = "d";

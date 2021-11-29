@@ -49,8 +49,6 @@ namespace ProjetoFinalDS
             {
                 pbUsuario.Image = (Image)resources.GetObject("usuario");
             }
-            
-
 
             lvColecoes.View = View.LargeIcon;
             lvColecoes.FullRowSelect = true;

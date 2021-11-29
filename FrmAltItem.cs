@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
@@ -69,9 +70,18 @@ namespace ProjetoFinalDS
             {
                 itens = itemDAO.buscarTodos(colecao);
             }
+
+            ResourceManager resources = Properties.Resources.ResourceManager;
+
             foreach (Item item in itens)
             {
-                imgList.Images.Add(item.getImagem());
+                Image img = item.getImagem();
+                if (img != null)
+                    imgList.Images.Add(item.getImagem());
+                else
+                {
+                    imgList.Images.Add((Image)resources.GetObject("sem_foto"));
+                }
                 ListViewItem lvItem = new ListViewItem(item.getNome(), cont);
                 lvItem.Tag = item;
                 lvItens.Items.Add(lvItem);
