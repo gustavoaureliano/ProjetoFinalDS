@@ -32,13 +32,15 @@ namespace ProjetoFinalDS
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAltItem));
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvItens = new System.Windows.Forms.ListView();
             this.panelTop = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
@@ -58,6 +60,7 @@ namespace ProjetoFinalDS
             this.btnExcluir.TabIndex = 5;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditar
             // 
@@ -72,15 +75,16 @@ namespace ProjetoFinalDS
             this.btnEditar.TabIndex = 6;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // listView1
+            // lvItens
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(48, 125);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(469, 403);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lvItens.HideSelection = false;
+            this.lvItens.Location = new System.Drawing.Point(62, 157);
+            this.lvItens.Name = "lvItens";
+            this.lvItens.Size = new System.Drawing.Size(450, 366);
+            this.lvItens.TabIndex = 4;
+            this.lvItens.UseCompatibleStateImageBehavior = false;
             // 
             // panelTop
             // 
@@ -95,17 +99,19 @@ namespace ProjetoFinalDS
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(804, 85);
             this.panelTop.TabIndex = 52;
+            this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAltItem_MouseMove);
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(372, 22);
+            this.label3.Location = new System.Drawing.Point(260, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(184, 33);
+            this.label3.Size = new System.Drawing.Size(446, 85);
             this.label3.TabIndex = 16;
             this.label3.Text = "Alterar - Item";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAltItem_MouseMove);
             // 
             // btnMinimizar
             // 
@@ -149,25 +155,49 @@ namespace ProjetoFinalDS
             this.panel1.Size = new System.Drawing.Size(189, 549);
             this.panel1.TabIndex = 60;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(168, 109);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(195, 29);
+            this.txtSearch.TabIndex = 57;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Silver;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.Location = new System.Drawing.Point(360, 109);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(47, 29);
+            this.btnSearch.TabIndex = 56;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // FrmAltItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 561);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lvItens);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAltItem";
             this.Text = "Alterar item";
+            this.Load += new System.EventHandler(this.FrmAltItem_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAltItem_MouseMove);
             this.panelTop.ResumeLayout(false);
-            this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -175,12 +205,14 @@ namespace ProjetoFinalDS
 
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvItens;
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

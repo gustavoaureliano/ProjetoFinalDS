@@ -27,6 +27,11 @@ namespace ProjetoFinalDS
             InitializeComponent();
         }
 
+        private void FrmAddColecao_Load(object sender, EventArgs e)
+        {
+            
+        }
+
         private void FrmAddColecao_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -45,5 +50,6 @@ namespace ProjetoFinalDS
         {
             this.Close();
         }
+
     }
 }

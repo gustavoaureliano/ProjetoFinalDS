@@ -40,6 +40,7 @@ namespace ProjetoFinalDS
         {
             this.Close();
             t1 = new Thread(abrirCadastro);
+            t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
         }
 
@@ -52,6 +53,7 @@ namespace ProjetoFinalDS
         {
             this.Close();
             t1 = new Thread(voltarHome);
+            t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
         }
 
@@ -94,8 +96,10 @@ namespace ProjetoFinalDS
             if (status)
             {
                 this.Close();
+                usuarioDao = new UsuarioDAO();
                 usuario = usuarioDao.buscarLogin(usuario);
                 t1 = new Thread(() => abrirColecao(usuario));
+                t1.SetApartmentState(ApartmentState.STA);
                 t1.Start();
             }
             else

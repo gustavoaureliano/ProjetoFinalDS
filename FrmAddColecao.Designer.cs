@@ -38,7 +38,7 @@ namespace ProjetoFinalDS
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.PictureBox();
@@ -123,7 +123,7 @@ namespace ProjetoFinalDS
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.panelTop.Controls.Add(this.label3);
+            this.panelTop.Controls.Add(this.lblNome);
             this.panelTop.Controls.Add(this.btnMinimizar);
             this.panelTop.Controls.Add(this.btnFechar);
             this.panelTop.Controls.Add(this.logo);
@@ -133,16 +133,17 @@ namespace ProjetoFinalDS
             this.panelTop.Size = new System.Drawing.Size(800, 85);
             this.panelTop.TabIndex = 63;
             // 
-            // label3
+            // lblNome
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(328, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(285, 33);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Adicionar - Coleções";
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.White;
+            this.lblNome.Location = new System.Drawing.Point(273, 0);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(376, 85);
+            this.lblNome.TabIndex = 16;
+            this.lblNome.Text = "Adicionar - Coleção";
+            this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNome.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAddColecao_MouseMove);
             // 
             // btnMinimizar
             // 
@@ -194,10 +195,10 @@ namespace ProjetoFinalDS
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAddColecao";
             this.Text = "Adicionar nova coleção";
+            this.Load += new System.EventHandler(this.FrmAddColecao_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAddColecao_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTop.ResumeLayout(false);
-            this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
@@ -215,7 +216,7 @@ namespace ProjetoFinalDS
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelTop;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.PictureBox logo;

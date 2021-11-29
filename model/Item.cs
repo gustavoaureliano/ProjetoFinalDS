@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoFinalDS.model
 {
-    class Item
+    public class Item
     {
 
         int idItem;

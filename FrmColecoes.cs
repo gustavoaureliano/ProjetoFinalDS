@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using ProjetoFinalDS.dao;
 
 namespace ProjetoFinalDS
 {
@@ -35,7 +36,49 @@ namespace ProjetoFinalDS
 
         private void FrmColecoes_Load(object sender, EventArgs e)
         {
-            
+            txtNomeUsuario.Text = usuario.getNome();
+            pbUsuario.Image = usuario.getImagem();
+
+            lvColecoes.View = View.LargeIcon;
+            lvColecoes.FullRowSelect = true;
+            lvColecoes.AllowDrop = true;
+            lvColecoes.Sorting = SortOrder.Ascending;
+
+            lvColecoes.Columns.Add("Coleções", 100);
+            lvColecoes.AutoResizeColumn(0, ColumnHeaderAutoResizeStyle.HeaderSize);
+
+            listarImgs(null);
+        }
+        public void listarImgs(String chave)
+        {
+
+            lvColecoes.Items.Clear();
+
+            ImageList imgList = new ImageList();
+            imgList.ImageSize = new Size(200, 200);
+
+            ColecaoDAO colecaoDaO = new ColecaoDAO();
+
+            int cont = 0;
+
+            List<Colecao> colecoes = null;
+            if (chave != null && chave.Length > 0)
+            {
+                colecoes = colecaoDaO.buscarTodos(usuario, chave);
+            } else
+            {
+                colecoes = colecaoDaO.buscarTodos(usuario);
+            }
+            foreach (Colecao colecao in colecoes)
+            {
+                imgList.Images.Add(colecao.getImagem());
+                ListViewItem item = new ListViewItem(colecao.getNome(), cont);
+                item.Tag = colecao;
+                lvColecoes.Items.Add(item);
+                cont++;
+            }
+            lvColecoes.LargeImageList = imgList;
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -72,5 +115,38 @@ namespace ProjetoFinalDS
         {
             Application.Run(new FrmAcervoGeek());
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            listarImgs(txtSearch.Text);
+        }
+
+        private void lvColecoes_Click(object sender, EventArgs e)
+        {
+            Colecao colecao = (Colecao) lvColecoes.SelectedItems[0].Tag;
+            this.Close();
+            t1 = new Thread(() => abriColecao(usuario, colecao));
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
+        }
+
+        private void abriColecao(Usuario usuario, Colecao colecao)
+        {
+            Application.Run(new FrmColecao(usuario, colecao));
+        }
+
+        private void btnAlterarColecao_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            t1 = new Thread(() => abrirAlterarColecao(usuario));
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
+        }
+
+        private void abrirAlterarColecao(Usuario usuario)
+        {
+            Application.Run(new FrmAltColecao(usuario));
+        }
+
     }
 }

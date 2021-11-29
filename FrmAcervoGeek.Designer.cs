@@ -92,6 +92,7 @@ namespace ProjetoFinalDS
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(650, 85);
             this.panelTop.TabIndex = 18;
+            this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAcervoGeek_MouseMove);
             // 
             // pictureBox1
             // 

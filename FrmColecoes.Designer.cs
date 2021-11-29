@@ -30,9 +30,9 @@ namespace ProjetoFinalDS
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmColecoes));
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lvColecoes = new System.Windows.Forms.ListView();
+            this.txtNomeUsuario = new System.Windows.Forms.Label();
+            this.pbUsuario = new System.Windows.Forms.PictureBox();
             this.btnAdicionarColecao = new System.Windows.Forms.Button();
             this.btnAlterarColecao = new System.Windows.Forms.Button();
             this.btnAcervoGeek = new System.Windows.Forms.Button();
@@ -41,11 +41,11 @@ namespace ProjetoFinalDS
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
@@ -53,37 +53,38 @@ namespace ProjetoFinalDS
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listView1
+            // lvColecoes
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(207, 174);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(607, 389);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lvColecoes.HideSelection = false;
+            this.lvColecoes.Location = new System.Drawing.Point(251, 174);
+            this.lvColecoes.Name = "lvColecoes";
+            this.lvColecoes.Size = new System.Drawing.Size(521, 389);
+            this.lvColecoes.TabIndex = 0;
+            this.lvColecoes.UseCompatibleStateImageBehavior = false;
+            this.lvColecoes.Click += new System.EventHandler(this.lvColecoes_Click);
             // 
-            // label1
+            // txtNomeUsuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightSlateGray;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(77, 129);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nome";
+            this.txtNomeUsuario.BackColor = System.Drawing.Color.LightSlateGray;
+            this.txtNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeUsuario.ForeColor = System.Drawing.Color.Black;
+            this.txtNomeUsuario.Location = new System.Drawing.Point(64, 94);
+            this.txtNomeUsuario.Name = "txtNomeUsuario";
+            this.txtNomeUsuario.Size = new System.Drawing.Size(125, 97);
+            this.txtNomeUsuario.TabIndex = 1;
+            this.txtNomeUsuario.Text = "Nome";
+            this.txtNomeUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox1
+            // pbUsuario
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(23, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pbUsuario.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pbUsuario.Image = ((System.Drawing.Image)(resources.GetObject("pbUsuario.Image")));
+            this.pbUsuario.Location = new System.Drawing.Point(12, 34);
+            this.pbUsuario.Name = "pbUsuario";
+            this.pbUsuario.Size = new System.Drawing.Size(54, 54);
+            this.pbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUsuario.TabIndex = 2;
+            this.pbUsuario.TabStop = false;
             // 
             // btnAdicionarColecao
             // 
@@ -97,7 +98,7 @@ namespace ProjetoFinalDS
             this.btnAdicionarColecao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdicionarColecao.Location = new System.Drawing.Point(12, 144);
             this.btnAdicionarColecao.Name = "btnAdicionarColecao";
-            this.btnAdicionarColecao.Size = new System.Drawing.Size(140, 34);
+            this.btnAdicionarColecao.Size = new System.Drawing.Size(136, 34);
             this.btnAdicionarColecao.TabIndex = 3;
             this.btnAdicionarColecao.Text = "Adicionar";
             this.btnAdicionarColecao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -115,12 +116,12 @@ namespace ProjetoFinalDS
             this.btnAlterarColecao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarColecao.Location = new System.Drawing.Point(12, 193);
             this.btnAlterarColecao.Name = "btnAlterarColecao";
-            this.btnAlterarColecao.Size = new System.Drawing.Size(112, 34);
+            this.btnAlterarColecao.Size = new System.Drawing.Size(114, 34);
             this.btnAlterarColecao.TabIndex = 4;
             this.btnAlterarColecao.Text = "Alterar";
             this.btnAlterarColecao.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnAlterarColecao.UseVisualStyleBackColor = false;
-            this.btnAlterarColecao.Click += new System.EventHandler(this.button2_Click);
+            this.btnAlterarColecao.Click += new System.EventHandler(this.btnAlterarColecao_Click);
             // 
             // btnAcervoGeek
             // 
@@ -200,25 +201,26 @@ namespace ProjetoFinalDS
             this.logo.TabIndex = 3;
             this.logo.TabStop = false;
             // 
-            // button3
+            // btnSearch
             // 
-            this.button3.BackColor = System.Drawing.Color.Silver;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(486, 116);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(47, 29);
-            this.button3.TabIndex = 43;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.Silver;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.Location = new System.Drawing.Point(486, 116);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(47, 29);
+            this.btnSearch.TabIndex = 43;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(294, 116);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 29);
-            this.textBox1.TabIndex = 44;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(294, 116);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(195, 29);
+            this.txtSearch.TabIndex = 44;
             // 
             // comboBox1
             // 
@@ -234,7 +236,7 @@ namespace ProjetoFinalDS
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pbUsuario);
             this.panel1.Controls.Add(this.btnAdicionarColecao);
             this.panel1.Controls.Add(this.btnAlterarColecao);
             this.panel1.Controls.Add(this.btnAcervoGeek);
@@ -250,17 +252,17 @@ namespace ProjetoFinalDS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 585);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.panelTop);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.txtNomeUsuario);
+            this.Controls.Add(this.lvColecoes);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmColecoes";
             this.Load += new System.EventHandler(this.FrmColecoes_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmColecoes_MouseMove);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).EndInit();
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
@@ -274,9 +276,9 @@ namespace ProjetoFinalDS
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ListView lvColecoes;
+        private System.Windows.Forms.Label txtNomeUsuario;
+        private System.Windows.Forms.PictureBox pbUsuario;
         private System.Windows.Forms.Button btnAdicionarColecao;
         private System.Windows.Forms.Button btnAlterarColecao;
         private System.Windows.Forms.Button btnAcervoGeek;
@@ -285,8 +287,8 @@ namespace ProjetoFinalDS
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.PictureBox logo;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel1;
     }

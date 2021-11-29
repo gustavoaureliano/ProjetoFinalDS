@@ -93,14 +93,15 @@ namespace ProjetoFinalDS.dao
             }
         }
 
-        public List<Item> buscarTodos()
+        public List<Item> buscarTodos(Colecao colecao)
         {
             List<Item> itens = new List<Item>();
             if (conn.State == ConnectionState.Open)
             {
-                String sqlSelectAll = "select * from item";
+                String sqlSelectAll = "select * from item where idColecao = @idColecao";
 
                 MySqlCommand command = new MySqlCommand(sqlSelectAll, conn);
+                command.Parameters.AddWithValue("@idColecao", colecao.getIdColecao());
 
                 MySqlDataReader reader;
 
@@ -113,7 +114,71 @@ namespace ProjetoFinalDS.dao
                         Item item = new Item();
                         item.setIdItem(int.Parse(reader["idItem"].ToString()));
                         item.setIdColecao(int.Parse(reader["idColecao"].ToString()));
-                        item.setIdCategoria(int.Parse(reader["idCategoria"].ToString()));
+                        try
+                        {
+                            item.setIdCategoria(int.Parse(reader["idCategoria"].ToString()));
+                        } catch (Exception e)
+                        {
+                            Console.WriteLine(e);
+                        }
+                        item.setNome(reader["nome"].ToString());
+                        item.setDescricao(reader["descricao"].ToString());
+
+                        byte[] img = (byte[])(reader["imagem"]);
+
+                        if (img != null)
+                        {
+                            MemoryStream mstream = new MemoryStream(img);
+                            Image imagem = Image.FromStream(mstream);
+                            item.setImagem(imagem);
+                        }
+
+                        itens.Add(item);
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show($"Erro: " + e.ToString());
+                }
+                finally
+                {
+                    ConexaoBD.fecharConexao();
+                }
+
+            }
+            return itens;
+        }
+
+        public List<Item> buscarTodos(Colecao colecao, String chave)
+        {
+            List<Item> itens = new List<Item>();
+            if (conn.State == ConnectionState.Open)
+            {
+                String sqlSelectAll = "select * from item where idColecao = @idColecao and upper(nome) like @chave";
+
+                MySqlCommand command = new MySqlCommand(sqlSelectAll, conn);
+                command.Parameters.AddWithValue("@idColecao", colecao.getIdColecao());
+                command.Parameters.AddWithValue("@chave", "%" + chave.ToUpper() + "%");
+
+                MySqlDataReader reader;
+
+                try
+                {
+                    reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        Item item = new Item();
+                        item.setIdItem(int.Parse(reader["idItem"].ToString()));
+                        item.setIdColecao(int.Parse(reader["idColecao"].ToString()));
+                        try
+                        {
+                            item.setIdCategoria(int.Parse(reader["idCategoria"].ToString()));
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e);
+                        }
                         item.setNome(reader["nome"].ToString());
                         item.setDescricao(reader["descricao"].ToString());
 
@@ -160,7 +225,14 @@ namespace ProjetoFinalDS.dao
                     {
                         item.setIdItem(int.Parse(reader["idItem"].ToString()));
                         item.setIdColecao(int.Parse(reader["idColecao"].ToString()));
-                        item.setIdCategoria(int.Parse(reader["idCategoria"].ToString()));
+                        try
+                        {
+                            item.setIdCategoria(int.Parse(reader["idCategoria"].ToString()));
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e);
+                        }
                         item.setNome(reader["nome"].ToString());
                         item.setDescricao(reader["descricao"].ToString());
 
@@ -197,9 +269,13 @@ namespace ProjetoFinalDS.dao
                 MySqlCommand command = new MySqlCommand(sqlUpdate, conn);
                 command.CommandType = CommandType.StoredProcedure;
 
-                command.Parameters.AddWithValue("@idCategoria", item.getIdCategoria());
+                if (item.getIdCategoria() > 0)
+                    command.Parameters.AddWithValue("@idCategoria", item.getIdCategoria());
+                else
+                    command.Parameters.AddWithValue("@idCategoria", null);
                 command.Parameters.AddWithValue("@nome", item.getNome());
                 command.Parameters.AddWithValue("@descricao", item.getDescricao());
+                MessageBox.Show("Atualizando...");
 
                 Image imagem = item.getImagem();
 
@@ -213,7 +289,7 @@ namespace ProjetoFinalDS.dao
                 imgByte = br.ReadBytes((int)mstream.Length);
 
                 command.Parameters.AddWithValue("@imagem", imgByte);
-                command.Parameters.AddWithValue("@idItem", item.getIdColecao());
+                command.Parameters.AddWithValue("@idItem", item.getIdItem());
 
                 try
                 {

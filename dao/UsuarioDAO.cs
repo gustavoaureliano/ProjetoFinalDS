@@ -110,9 +110,11 @@ namespace ProjetoFinalDS.dao
 
         public Usuario buscarLogin(Usuario usuario)
         {
+            MessageBox.Show("buscandoLogin");
             if (conn.State == ConnectionState.Open)
             {
-                String sqlSelect = "select * from usuario where usuario = @usuario";
+                MessageBox.Show("conexão aberta");
+                String sqlSelect = "select * from usuario where usuario.usuario = @usuario";
 
                 MySqlCommand command = new MySqlCommand(sqlSelect, conn);
                 command.Parameters.AddWithValue("@usuario", usuario.getUsuario());
@@ -122,12 +124,14 @@ namespace ProjetoFinalDS.dao
                 try
                 {
                     reader = command.ExecuteReader();
+                    MessageBox.Show("BuscarLogin");
                     if (reader.Read())
                     {
                         usuario.setIdUsuario(int.Parse(reader["idUsuario"].ToString()));
                         usuario.setUsuario(reader["usuario"].ToString());
                         usuario.setNome(reader["nome"].ToString());
                         usuario.setSenha(reader["senha"].ToString());
+                        MessageBox.Show("idUsuario: " + reader["idUsuario"].ToString());
 
                         byte[] img = (byte[])(reader["foto"]);
 

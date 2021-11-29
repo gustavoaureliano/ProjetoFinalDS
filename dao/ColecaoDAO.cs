@@ -112,7 +112,7 @@ namespace ProjetoFinalDS.dao
                     {
                         Colecao colecao = new Colecao();
                         colecao.setIdColecao(int.Parse(reader["idColecao"].ToString()));
-                        colecao.setIdUsuario(int.Parse(reader["idUsuaio"].ToString()));
+                        colecao.setIdUsuario(int.Parse(reader["idUsuario"].ToString()));
                         colecao.setNome(reader["nome"].ToString());
                         colecao.setDescricao(reader["descricao"].ToString());
 
@@ -124,6 +124,68 @@ namespace ProjetoFinalDS.dao
                             Image imagem = Image.FromStream(mstream);
                             colecao.setImagem(imagem);
                         }
+
+                        DateTime parsedDataAlteracao = DateTime.Parse(reader["data_alteracao"].ToString());
+                        colecao.setDataAlteracao(parsedDataAlteracao);
+
+                        DateTime parsedDataCriacao = DateTime.Parse(reader["data_criacao"].ToString());
+                        colecao.setDataCricao(parsedDataCriacao);
+
+                        colecoes.Add(colecao);
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show($"Erro: " + e.ToString());
+                }
+                finally
+                {
+                    ConexaoBD.fecharConexao();
+                }
+
+            }
+            return colecoes;
+        }
+
+        public List<Colecao> buscarTodos(Usuario usuario, String chave)
+        {
+            List<Colecao> colecoes = new List<Colecao>();
+            if (conn.State == ConnectionState.Open)
+            {
+                String sqlSelectAll = "select * from colecao where idUsuario = @idUsuario and upper(nome) like @chave";
+
+                MySqlCommand command = new MySqlCommand(sqlSelectAll, conn);
+                command.Parameters.AddWithValue("@idUsuario", usuario.getIdUsuario());
+                command.Parameters.AddWithValue("@chave", "%" + chave.ToUpper() + "%");
+
+                MySqlDataReader reader;
+
+                try
+                {
+                    reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        Colecao colecao = new Colecao();
+                        colecao.setIdColecao(int.Parse(reader["idColecao"].ToString()));
+                        colecao.setIdUsuario(int.Parse(reader["idUsuario"].ToString()));
+                        colecao.setNome(reader["nome"].ToString());
+                        colecao.setDescricao(reader["descricao"].ToString());
+
+                        byte[] img = (byte[])(reader["imagem"]);
+
+                        if (img != null)
+                        {
+                            MemoryStream mstream = new MemoryStream(img);
+                            Image imagem = Image.FromStream(mstream);
+                            colecao.setImagem(imagem);
+                        }
+
+                        DateTime parsedDataAlteracao = DateTime.Parse(reader["data_alteracao"].ToString());
+                        colecao.setDataAlteracao(parsedDataAlteracao);
+
+                        DateTime parsedDataCriacao = DateTime.Parse(reader["data_criacao"].ToString());
+                        colecao.setDataAlteracao(parsedDataCriacao);
 
                         colecoes.Add(colecao);
                     }
@@ -170,6 +232,12 @@ namespace ProjetoFinalDS.dao
                             Image imagem = Image.FromStream(mstream);
                             colecao.setImagem(imagem);
                         }
+
+                        DateTime parsedDataAlteracao = DateTime.Parse(reader["data_alteracao"].ToString());
+                        colecao.setDataAlteracao(parsedDataAlteracao);
+
+                        DateTime parsedDataCriacao = DateTime.Parse(reader["data_criacao"].ToString());
+                        colecao.setDataAlteracao(parsedDataCriacao);
                     }
                 }
                 catch (Exception e)
@@ -217,7 +285,7 @@ namespace ProjetoFinalDS.dao
                     int i = command.ExecuteNonQuery();
                     if (i > 0)
                     {
-                        MessageBox.Show("Colecao atualizada com sucesso!");
+                        MessageBox.Show("Coleção atualizada com sucesso!");
                     }
                 }
                 catch (Exception e)

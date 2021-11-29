@@ -30,62 +30,66 @@ namespace ProjetoFinalDS
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAltColecao));
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lvColecoes = new System.Windows.Forms.ListView();
+            this.btnExluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
-            // listView1
+            // lvColecoes
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(48, 125);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(469, 403);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lvColecoes.HideSelection = false;
+            this.lvColecoes.Location = new System.Drawing.Point(67, 162);
+            this.lvColecoes.Name = "lvColecoes";
+            this.lvColecoes.Size = new System.Drawing.Size(450, 366);
+            this.lvColecoes.TabIndex = 0;
+            this.lvColecoes.UseCompatibleStateImageBehavior = false;
             // 
-            // button1
+            // btnExluir
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(578, 350);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 42);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Excluir";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnExluir.BackColor = System.Drawing.SystemColors.Control;
+            this.btnExluir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnExluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExluir.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnExluir.Location = new System.Drawing.Point(578, 350);
+            this.btnExluir.Name = "btnExluir";
+            this.btnExluir.Size = new System.Drawing.Size(163, 42);
+            this.btnExluir.TabIndex = 7;
+            this.btnExluir.Text = "Excluir";
+            this.btnExluir.UseVisualStyleBackColor = false;
+            this.btnExluir.Click += new System.EventHandler(this.btnExluir_Click);
             // 
-            // button2
+            // btnEditar
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(18)))), ((int)(((byte)(6)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(578, 271);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(163, 42);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Editar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(18)))), ((int)(((byte)(6)))));
+            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEditar.Location = new System.Drawing.Point(578, 271);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(163, 42);
+            this.btnEditar.TabIndex = 8;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.panelTop.Controls.Add(this.label3);
+            this.panelTop.Controls.Add(this.lblNome);
             this.panelTop.Controls.Add(this.btnMinimizar);
             this.panelTop.Controls.Add(this.btnFechar);
             this.panelTop.Controls.Add(this.logo);
@@ -95,17 +99,19 @@ namespace ProjetoFinalDS
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(804, 85);
             this.panelTop.TabIndex = 53;
+            this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAltColecao_MouseMove);
             // 
-            // label3
+            // lblNome
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(351, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(234, 33);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Alterar - Coleção";
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.White;
+            this.lblNome.Location = new System.Drawing.Point(254, 0);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(421, 85);
+            this.lblNome.TabIndex = 16;
+            this.lblNome.Text = "Alterar - Coleção";
+            this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNome.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAltColecao_MouseMove);
             // 
             // btnMinimizar
             // 
@@ -149,38 +155,64 @@ namespace ProjetoFinalDS
             this.panel1.Size = new System.Drawing.Size(189, 549);
             this.panel1.TabIndex = 60;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(172, 108);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(195, 29);
+            this.txtSearch.TabIndex = 55;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Silver;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.Location = new System.Drawing.Point(364, 108);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(47, 29);
+            this.btnSearch.TabIndex = 54;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // FrmAltColecao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 561);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.panelTop);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.btnExluir);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.lvColecoes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAltColecao";
             this.Text = "Alterar coleção";
+            this.Load += new System.EventHandler(this.FrmAltColecao_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAltColecao_MouseMove);
             this.panelTop.ResumeLayout(false);
-            this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ListView lvColecoes;
+        private System.Windows.Forms.Button btnExluir;
+        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Panel panelTop;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

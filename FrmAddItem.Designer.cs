@@ -157,14 +157,15 @@ namespace ProjetoFinalDS
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(349, 22);
+            this.label3.Location = new System.Drawing.Point(239, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(220, 33);
+            this.label3.Size = new System.Drawing.Size(417, 85);
             this.label3.TabIndex = 16;
             this.label3.Text = "Adicionar - Item";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAddItem_MouseMove);
             // 
             // btnMinimizar
             // 
@@ -221,7 +222,6 @@ namespace ProjetoFinalDS
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAddItem_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTop.ResumeLayout(false);
-            this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();

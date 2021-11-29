@@ -52,6 +52,12 @@
     <Compile Include="dao\ConexaoBD.cs" />
     <Compile Include="dao\ItemDAO.cs" />
     <Compile Include="dao\UsuarioDAO.cs" />
+    <Compile Include="FrmAcervoGeek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAcervoGeek.Designer.cs">
+      <DependentUpon>FrmAcervoGeek.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAddColecao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     <Compile Include="model\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAcervoGeek.resx">
+      <DependentUpon>FrmAcervoGeek.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAddColecao.resx">
       <DependentUpon>FrmAddColecao.cs</DependentUpon>
     </EmbeddedResource>
