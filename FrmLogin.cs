@@ -46,7 +46,7 @@ namespace ProjetoFinalDS
             imagens.Add((Image)resources.GetObject("imagem_login_7"));
 
             Random rand = new Random();
-            int num = rand.Next(7);
+            int num = rand.Next(6);
             imagemLateral.Image = imagens[num];
         }
 
