@@ -234,6 +234,7 @@ namespace ProjetoFinalDS
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEditItem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Item";
             this.Load += new System.EventHandler(this.FrmEditItem_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmEditItem_MouseMove);

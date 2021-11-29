@@ -36,7 +36,11 @@ namespace ProjetoFinalDS
 
         private void FrmPerfil_Load(object sender, EventArgs e)
         {
+            pbImagemPerfil.Image = usuario.getImagem();
+            txtNome.Text = usuario.getNome();
+            txtUsuario.Text = usuario.getUsuario();
 
+            pbImagemPerfil.AllowDrop = true;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -82,9 +86,42 @@ namespace ProjetoFinalDS
             usuario.setNome(txtNome.Text.ToString());
             usuario.setUsuario(txtUsuario.Text.ToString());
             usuario.setSenha(txtSenha.Text.ToString());
-            usuario.setImagem(imagemPerfil.Image);
+            usuario.setImagem(pbImagemPerfil.Image);
 
             usuarioDao.atualizar(usuario);
+        }
+
+        private void btnInserirFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "JPG Files(.jpg)|.jpg|PNG Files(.png)|.png|AllFiles(.)|.";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                String URLFoto = dialog.FileName.ToString();
+                Image img = Image.FromFile(URLFoto);
+
+                pbImagemPerfil.ImageLocation = URLFoto;
+                usuario.setImagem(img);
+            }
+        }
+
+        private void pbImagemPerfil_DragDrop(object sender, DragEventArgs e)
+        {
+            var data = e.Data.GetData(DataFormats.FileDrop);
+            if (data != null)
+            {
+                String[] fileNames = (String[])data;
+                Image img = Image.FromFile(fileNames[0]);
+  
+                pbImagemPerfil.Image = img;
+                usuario.setImagem(img);
+            }
+        }
+
+        private void pbImagemPerfil_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Copy;
         }
     }
 }

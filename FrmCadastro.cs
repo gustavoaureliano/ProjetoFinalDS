@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Threading;
 using ProjetoFinalDS.dao;
 using ProjetoFinalDS.model;
+using System.Collections;
 
 namespace ProjetoFinalDS
 {
@@ -31,6 +32,16 @@ namespace ProjetoFinalDS
         public FrmCadastro()
         {
             InitializeComponent();
+            ArrayList imagens = new ArrayList();
+            imagens.Add(@"H:\Imagens\Projeto Final DS\com tamanho certo\imagem cadastro1.jpg");
+            imagens.Add(@"H:\Imagens\Projeto Final DS\com tamanho certo\imagem cadastro2.jpg");
+            imagens.Add(@"H:\Imagens\Projeto Final DS\com tamanho certo\imagem cadastro3.jpg");
+            imagens.Add(@"H:\Imagens\Projeto Final DS\com tamanho certo\imagem cadastro4.jpg");
+
+
+            Random rand = new Random();
+            int num = rand.Next(4);
+            imagemLateral.Load("" + imagens[num]);
         }
 
         private void FrmCadastro_Load(object sender, EventArgs e)

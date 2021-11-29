@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjetoFinalDS.dao;
+using ProjetoFinalDS.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,14 +24,12 @@ namespace ProjetoFinalDS
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        public FrmAddColecao()
+        private Colecao colecao;
+
+        public FrmAddColecao(Colecao colecao)
         {
             InitializeComponent();
-        }
-
-        private void FrmAddColecao_Load(object sender, EventArgs e)
-        {
-            
+            this.colecao = colecao;
         }
 
         private void FrmAddColecao_MouseMove(object sender, MouseEventArgs e)
@@ -51,5 +51,54 @@ namespace ProjetoFinalDS
             this.Close();
         }
 
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Colecao colecao = new Colecao();
+            ColecaoDAO colecaodao = new ColecaoDAO();
+
+            colecao.setNome(txtColec.Text.ToString());
+            colecao.setDescricao(txtDesc.Text.ToString());
+            colecao.setImagem(pbImagemColec.Image);
+
+            colecaodao.atualizar(colecao);
+        }
+
+        private void btnInserirFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "JPG Files(.jpg)|.jpg|PNG Files(.png)|.png|AllFiles(.)|.";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                String URLFoto = dialog.FileName.ToString();
+                Image img = Image.FromFile(URLFoto);
+
+                pbImagemColec.ImageLocation = URLFoto;
+                colecao.setImagem(img);
+            }
+        }
+
+        private void FrmAddColecao_Load(object sender, EventArgs e)
+        {
+            pbImagemColec.AllowDrop = true;
+        }
+
+        private void pbImagemColec_DragDrop(object sender, DragEventArgs e)
+        {
+            var data = e.Data.GetData(DataFormats.FileDrop);
+            if (data != null)
+            {
+                String[] fileNames = (String[])data;
+                Image img = Image.FromFile(fileNames[0]);
+
+                pbImagemColec.Image = img;
+                colecao.setImagem(img);
+            }
+        }
+
+        private void pbImagemColec_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Copy;
+        }
     }
 }

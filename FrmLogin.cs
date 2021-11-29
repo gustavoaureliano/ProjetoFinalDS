@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Threading;
 using ProjetoFinalDS.dao;
 using ProjetoFinalDS.model;
+using System.Collections;
 
 namespace ProjetoFinalDS
 {
@@ -29,6 +30,19 @@ namespace ProjetoFinalDS
         public FrmLogin()
         {
             InitializeComponent();
+
+            ArrayList imagens = new ArrayList();
+            imagens.Add(@"H:\Imagens\Projeto Final DS\com tamanho certo\imagem login 7.jpg");
+            imagens.Add(@"H:\Imagens\Projeto Final DS\com tamanho certo\imagem login 5.jpg");
+            imagens.Add(@"H:\Imagens\Projeto Final DS\com tamanho certo\imagem login 1.jpg");
+            imagens.Add(@"H:\Imagens\Projeto Final DS\com tamanho certo\imagem login 2.png");
+            imagens.Add(@"H:\Imagens\Projeto Final DS\com tamanho certo\imagem login 3.jpg");
+            imagens.Add(@"H:\Imagens\Projeto Final DS\com tamanho certo\login gon.jpg");
+
+
+            Random rand = new Random();
+            int num = rand.Next(6);
+            imagemLateral.Load("" + imagens[num]);
         }
 
         private void label4_Click(object sender, EventArgs e)

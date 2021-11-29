@@ -61,9 +61,9 @@ namespace ProjetoFinalDS
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogin.Location = new System.Drawing.Point(293, 296);
+            this.btnLogin.Location = new System.Drawing.Point(293, 308);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(234, 47);
+            this.btnLogin.Size = new System.Drawing.Size(234, 42);
             this.btnLogin.TabIndex = 1;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -78,7 +78,7 @@ namespace ProjetoFinalDS
             this.btnCadastro.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCadastro.Location = new System.Drawing.Point(293, 370);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(234, 47);
+            this.btnCadastro.Size = new System.Drawing.Size(234, 42);
             this.btnCadastro.TabIndex = 1;
             this.btnCadastro.Text = "Cadastro";
             this.btnCadastro.UseVisualStyleBackColor = false;

@@ -346,6 +346,7 @@ namespace ProjetoFinalDS
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmColecao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Coleçao";
             this.Load += new System.EventHandler(this.FrmColecao_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmColecao_MouseMove);

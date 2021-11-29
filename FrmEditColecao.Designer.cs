@@ -210,6 +210,7 @@ namespace ProjetoFinalDS
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEditColecao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Coleção";
             this.Load += new System.EventHandler(this.FrmEditColecao_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmEditColecao_MouseMove);

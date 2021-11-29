@@ -60,18 +60,20 @@ namespace ProjetoFinalDS
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(415, 171);
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(414, 171);
+            this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(353, 31);
+            this.txtUsuario.Size = new System.Drawing.Size(353, 32);
             this.txtUsuario.TabIndex = 1;
             // 
             // txtSenha
             // 
-            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(414, 254);
+            this.txtSenha.Multiline = true;
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(353, 31);
+            this.txtSenha.Size = new System.Drawing.Size(353, 32);
             this.txtSenha.TabIndex = 3;
             // 
             // lblSenha
@@ -154,7 +156,7 @@ namespace ProjetoFinalDS
             this.lblLinkCadas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblLinkCadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLinkCadas.LinkColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblLinkCadas.Location = new System.Drawing.Point(574, 298);
+            this.lblLinkCadas.Location = new System.Drawing.Point(569, 298);
             this.lblLinkCadas.Name = "lblLinkCadas";
             this.lblLinkCadas.Size = new System.Drawing.Size(61, 16);
             this.lblLinkCadas.TabIndex = 11;
@@ -217,6 +219,7 @@ namespace ProjetoFinalDS
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.imagemLateral)).EndInit();

@@ -30,67 +30,71 @@ namespace ProjetoFinalDS
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddColecao));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbImagemColec = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.txtDesc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtColec = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
-            this.lblNome = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnInserirFoto = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagemColec)).BeginInit();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pbImagemColec
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(520, 168);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(207, 195);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 71;
-            this.pictureBox1.TabStop = false;
+            this.pbImagemColec.Image = ((System.Drawing.Image)(resources.GetObject("pbImagemColec.Image")));
+            this.pbImagemColec.Location = new System.Drawing.Point(519, 157);
+            this.pbImagemColec.Name = "pbImagemColec";
+            this.pbImagemColec.Size = new System.Drawing.Size(207, 195);
+            this.pbImagemColec.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImagemColec.TabIndex = 71;
+            this.pbImagemColec.TabStop = false;
+            this.pbImagemColec.DragDrop += new System.Windows.Forms.DragEventHandler(this.pbImagemColec_DragDrop);
+            this.pbImagemColec.DragEnter += new System.Windows.Forms.DragEventHandler(this.pbImagemColec_DragEnter);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(516, 135);
+            this.label1.Location = new System.Drawing.Point(515, 124);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 20);
             this.label1.TabIndex = 70;
             this.label1.Text = "Foto";
             // 
-            // button1
+            // btnSalvar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(18)))), ((int)(((byte)(6)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(536, 407);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 42);
-            this.button1.TabIndex = 69;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(18)))), ((int)(((byte)(6)))));
+            this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSalvar.Location = new System.Drawing.Point(153, 414);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(178, 42);
+            this.btnSalvar.TabIndex = 69;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // textBox2
+            // txtDesc
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(89, 221);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(294, 117);
-            this.textBox2.TabIndex = 67;
+            this.txtDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDesc.Location = new System.Drawing.Point(89, 221);
+            this.txtDesc.Multiline = true;
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(294, 117);
+            this.txtDesc.TabIndex = 67;
             // 
             // label4
             // 
@@ -102,13 +106,13 @@ namespace ProjetoFinalDS
             this.label4.TabIndex = 66;
             this.label4.Text = "Descrição";
             // 
-            // textBox4
+            // txtColec
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(89, 145);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(294, 29);
-            this.textBox4.TabIndex = 65;
+            this.txtColec.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtColec.Location = new System.Drawing.Point(89, 145);
+            this.txtColec.Name = "txtColec";
+            this.txtColec.Size = new System.Drawing.Size(294, 29);
+            this.txtColec.TabIndex = 65;
             // 
             // label5
             // 
@@ -116,14 +120,14 @@ namespace ProjetoFinalDS
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(89, 122);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 20);
+            this.label5.Size = new System.Drawing.Size(135, 20);
             this.label5.TabIndex = 64;
-            this.label5.Text = "Nome do Item";
+            this.label5.Text = "Nome da Coleção";
             // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.panelTop.Controls.Add(this.lblNome);
+            this.panelTop.Controls.Add(this.label3);
             this.panelTop.Controls.Add(this.btnMinimizar);
             this.panelTop.Controls.Add(this.btnFechar);
             this.panelTop.Controls.Add(this.logo);
@@ -133,17 +137,16 @@ namespace ProjetoFinalDS
             this.panelTop.Size = new System.Drawing.Size(800, 85);
             this.panelTop.TabIndex = 63;
             // 
-            // lblNome
+            // label3
             // 
-            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.Color.White;
-            this.lblNome.Location = new System.Drawing.Point(273, 0);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(376, 85);
-            this.lblNome.TabIndex = 16;
-            this.lblNome.Text = "Adicionar - Coleção";
-            this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblNome.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAddColecao_MouseMove);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(328, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(270, 33);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Adicionar - Coleção";
             // 
             // btnMinimizar
             // 
@@ -179,26 +182,44 @@ namespace ProjetoFinalDS
             this.logo.TabIndex = 3;
             this.logo.TabStop = false;
             // 
+            // btnInserirFoto
+            // 
+            this.btnInserirFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnInserirFoto.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnInserirFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInserirFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserirFoto.ForeColor = System.Drawing.Color.Black;
+            this.btnInserirFoto.Location = new System.Drawing.Point(575, 379);
+            this.btnInserirFoto.Name = "btnInserirFoto";
+            this.btnInserirFoto.Size = new System.Drawing.Size(97, 27);
+            this.btnInserirFoto.TabIndex = 72;
+            this.btnInserirFoto.Text = "Inserir foto";
+            this.btnInserirFoto.UseVisualStyleBackColor = false;
+            this.btnInserirFoto.Click += new System.EventHandler(this.btnInserirFoto_Click);
+            // 
             // FrmAddColecao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 491);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnInserirFoto);
+            this.Controls.Add(this.pbImagemColec);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtColec);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAddColecao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar nova coleção";
             this.Load += new System.EventHandler(this.FrmAddColecao_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAddColecao_MouseMove);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagemColec)).EndInit();
             this.panelTop.ResumeLayout(false);
+            this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
@@ -208,17 +229,18 @@ namespace ProjetoFinalDS
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbImagemColec;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtColec;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelTop;
-        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.PictureBox logo;
+        private System.Windows.Forms.Button btnInserirFoto;
     }
 }

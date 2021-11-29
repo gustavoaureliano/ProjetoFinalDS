@@ -189,6 +189,7 @@ namespace ProjetoFinalDS
             this.Controls.Add(this.lvItens);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAltItem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alterar item";
             this.Load += new System.EventHandler(this.FrmAltItem_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAltItem_MouseMove);
