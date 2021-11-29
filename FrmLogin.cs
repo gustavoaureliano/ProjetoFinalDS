@@ -43,7 +43,6 @@ namespace ProjetoFinalDS
             imagens.Add((Image)resources.GetObject("imagem_login_3"));
             imagens.Add((Image)resources.GetObject("imagem_login_4"));
             imagens.Add((Image)resources.GetObject("imagem_login_5"));
-            imagens.Add((Image)resources.GetObject("imagem_login_6"));
             imagens.Add((Image)resources.GetObject("imagem_login_7"));
 
             Random rand = new Random();
