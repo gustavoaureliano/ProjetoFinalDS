@@ -216,6 +216,7 @@ namespace ProjetoFinalDS
             this.Name = "FrmAddItem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar novo item";
+            this.Load += new System.EventHandler(this.FrmAddItem_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAddItem_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pbImagemItem)).EndInit();
             this.panelTop.ResumeLayout(false);

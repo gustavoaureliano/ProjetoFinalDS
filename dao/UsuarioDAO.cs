@@ -163,7 +163,6 @@ namespace ProjetoFinalDS.dao
                 String sqlUpdate = "update usuario set usuario = @usuario, nome = @nome, senha = @senha, foto = @foto where idUsuario = @idUsuario";
 
                 MySqlCommand command = new MySqlCommand(sqlUpdate, conn);
-                command.CommandType = CommandType.StoredProcedure;
 
                 command.Parameters.AddWithValue("@usuario", usuario.getUsuario());
                 command.Parameters.AddWithValue("@nome", usuario.getNome());
@@ -171,14 +170,19 @@ namespace ProjetoFinalDS.dao
 
                 Image imagem = usuario.getImagem();
 
-                MemoryStream mstream = new MemoryStream();
-                imagem.Save(mstream, imagem.RawFormat);
-                mstream.Position = 0;
-
-                BinaryReader br = new BinaryReader(mstream);
                 byte[] imgByte = null;
+                if (imagem != null)
+                {
+                    MemoryStream mstream = new MemoryStream();
+                    imagem.Save(mstream, imagem.RawFormat);
+                    mstream.Position = 0;
 
-                imgByte = br.ReadBytes((int)mstream.Length);
+                    BinaryReader br = new BinaryReader(mstream);
+
+                    imgByte = br.ReadBytes((int)mstream.Length);
+                }
+
+                
 
                 command.Parameters.AddWithValue("@foto", imgByte);
                 command.Parameters.AddWithValue("@idUsuario", usuario.getIdUsuario());
@@ -188,7 +192,7 @@ namespace ProjetoFinalDS.dao
                     int i = command.ExecuteNonQuery();
                     if (i > 0)
                     {
-                        MessageBox.Show("Colecao atualizada com sucesso!");
+                        MessageBox.Show("Usuario atualizado com sucesso!");
                     }
                 }
                 catch (Exception e)

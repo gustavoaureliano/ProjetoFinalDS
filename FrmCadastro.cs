@@ -76,8 +76,15 @@ namespace ProjetoFinalDS
                 usuario.setSenha(txtSenha.Text);
 
                 usuarioDao.cadastrarUsuario(usuario);
+                t1 = new Thread(() => abrirColecao(usuario));
+                t1.SetApartmentState(ApartmentState.STA);
+                t1.Start();
             }
 
+        }
+        private void abrirColecao(Usuario usuario)
+        {
+            Application.Run(new FrmColecoes(usuario));
         }
 
 

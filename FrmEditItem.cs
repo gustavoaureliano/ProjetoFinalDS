@@ -96,7 +96,6 @@ namespace ProjetoFinalDS
         {
             item.setNome(txtNome.Text);
             item.setDescricao(txtDescricao.Text);
-            MessageBox.Show("nome: " + item.getNome());
             ItemDAO itemDAO = new ItemDAO();
             itemDAO.atualizar(item);
             this.Close();

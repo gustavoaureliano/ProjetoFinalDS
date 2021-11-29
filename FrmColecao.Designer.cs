@@ -259,6 +259,7 @@ namespace ProjetoFinalDS
             this.btnAdicionarItem.Text = "Adicionar Item";
             this.btnAdicionarItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdicionarItem.UseVisualStyleBackColor = false;
+            this.btnAdicionarItem.Click += new System.EventHandler(this.btnAdicionarItem_Click);
             // 
             // btnAlterarItem
             // 
@@ -308,6 +309,7 @@ namespace ProjetoFinalDS
             this.pbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbUsuario.TabIndex = 62;
             this.pbUsuario.TabStop = false;
+            this.pbUsuario.Click += new System.EventHandler(this.txtNome_Click);
             // 
             // txtNome
             // 
@@ -320,6 +322,7 @@ namespace ProjetoFinalDS
             this.txtNome.TabIndex = 61;
             this.txtNome.Text = "Nome";
             this.txtNome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtNome.Click += new System.EventHandler(this.txtNome_Click);
             // 
             // FrmColecao
             // 

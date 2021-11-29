@@ -187,5 +187,30 @@ namespace ProjetoFinalDS
             Application.Run(new FrmAltItem(usuario, colecao));
         }
 
+        private void btnAdicionarItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            t1 = new Thread(() => abrirAddItem(usuario, colecao));
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
+        }
+
+        private void abrirAddItem(Usuario usuario, Colecao colecao)
+        {
+            Application.Run(new FrmAddItem(usuario, colecao));
+        }
+
+        private void txtNome_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            t1 = new Thread(() => abrirPerfil(usuario));
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
+        }
+
+        private void abrirPerfil(Usuario usuario)
+        {
+            Application.Run(new FrmPerfil(usuario));
+        }
     }
 }

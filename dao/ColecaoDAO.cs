@@ -30,14 +30,17 @@ namespace ProjetoFinalDS.dao
 
                 Image imagem = colecao.getImagem();
 
-                MemoryStream mstream = new MemoryStream();
-                imagem.Save(mstream, imagem.RawFormat);
-                mstream.Position = 0;
-
-                BinaryReader br = new BinaryReader(mstream);
                 byte[] imgByte = null;
+                if (imagem != null)
+                {
+                    MemoryStream mstream = new MemoryStream();
+                    imagem.Save(mstream, imagem.RawFormat);
+                    mstream.Position = 0;
 
-                imgByte = br.ReadBytes((int)mstream.Length);
+                    BinaryReader br = new BinaryReader(mstream);
+
+                    imgByte = br.ReadBytes((int)mstream.Length);
+                }
 
                 command.Parameters.AddWithValue("@imagem", imgByte);
 
@@ -295,14 +298,17 @@ namespace ProjetoFinalDS.dao
 
                 Image imagem = colecao.getImagem();
 
-                MemoryStream mstream = new MemoryStream();
-                imagem.Save(mstream, imagem.RawFormat);
-                mstream.Position = 0;
-
-                BinaryReader br = new BinaryReader(mstream);
                 byte[] imgByte = null;
+                if (imagem != null)
+                {
+                    MemoryStream mstream = new MemoryStream();
+                    imagem.Save(mstream, imagem.RawFormat);
+                    mstream.Position = 0;
 
-                imgByte = br.ReadBytes((int)mstream.Length);
+                    BinaryReader br = new BinaryReader(mstream);
+
+                    imgByte = br.ReadBytes((int)mstream.Length);
+                }
 
                 command.Parameters.AddWithValue("@imagem", imgByte);
                 command.Parameters.AddWithValue("@idColecao", colecao.getIdColecao());

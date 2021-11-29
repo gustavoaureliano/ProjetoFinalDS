@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -24,12 +25,17 @@ namespace ProjetoFinalDS
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        private Colecao colecao;
+        Thread t1;
 
-        public FrmAddColecao(Colecao colecao)
+        private Colecao colecao;
+        private Usuario usuario;
+
+        public FrmAddColecao(Usuario usuario)
         {
             InitializeComponent();
-            this.colecao = colecao;
+            this.usuario = usuario;
+            colecao = new Colecao();
+            colecao.setIdUsuario(usuario.getIdUsuario());
         }
 
         private void FrmAddColecao_MouseMove(object sender, MouseEventArgs e)
@@ -49,18 +55,29 @@ namespace ProjetoFinalDS
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
+            t1 = new Thread(() => AbrirColecoes(usuario));
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
+        }
+
+        private void AbrirColecoes(Usuario usuario)
+        {
+            Application.Run(new FrmColecoes(usuario));
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Colecao colecao = new Colecao();
             ColecaoDAO colecaodao = new ColecaoDAO();
 
             colecao.setNome(txtColec.Text.ToString());
             colecao.setDescricao(txtDesc.Text.ToString());
             colecao.setImagem(pbImagemColec.Image);
 
-            colecaodao.atualizar(colecao);
+            colecaodao.incluir(colecao);
+            this.Close();
+            t1 = new Thread(() => AbrirColecoes(usuario));
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
         }
 
         private void btnInserirFoto_Click(object sender, EventArgs e)

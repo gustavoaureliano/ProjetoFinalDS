@@ -25,20 +25,26 @@ namespace ProjetoFinalDS.dao
 
                 MySqlCommand command = new MySqlCommand(sqlInsert, conn);
                 command.Parameters.AddWithValue("@idColecao", item.getIdColecao());
-                command.Parameters.AddWithValue("@idCategoria", item.getIdCategoria());
+                if (item.getIdCategoria() > 0)
+                    command.Parameters.AddWithValue("@idCategoria", item.getIdCategoria());
+                else
+                    command.Parameters.AddWithValue("@idCategoria", null);
                 command.Parameters.AddWithValue("@nome", item.getNome());
                 command.Parameters.AddWithValue("@descricao", item.getDescricao());
 
                 Image imagem = item.getImagem();
 
-                MemoryStream mstream = new MemoryStream();
-                imagem.Save(mstream, imagem.RawFormat);
-                mstream.Position = 0;
-
-                BinaryReader br = new BinaryReader(mstream);
                 byte[] imgByte = null;
+                if (imagem != null)
+                {
+                    MemoryStream mstream = new MemoryStream();
+                    imagem.Save(mstream, imagem.RawFormat);
+                    mstream.Position = 0;
 
-                imgByte = br.ReadBytes((int)mstream.Length);
+                    BinaryReader br = new BinaryReader(mstream);
+
+                    imgByte = br.ReadBytes((int)mstream.Length);
+                }
 
                 command.Parameters.AddWithValue("@imagem", imgByte);
 
@@ -300,20 +306,23 @@ namespace ProjetoFinalDS.dao
                     command.Parameters.AddWithValue("@idCategoria", item.getIdCategoria());
                 else
                     command.Parameters.AddWithValue("@idCategoria", null);
+
                 command.Parameters.AddWithValue("@nome", item.getNome());
                 command.Parameters.AddWithValue("@descricao", item.getDescricao());
-                MessageBox.Show("Atualizando...");
 
                 Image imagem = item.getImagem();
 
-                MemoryStream mstream = new MemoryStream();
-                imagem.Save(mstream, imagem.RawFormat);
-                mstream.Position = 0;
-
-                BinaryReader br = new BinaryReader(mstream);
                 byte[] imgByte = null;
+                if (imagem != null)
+                {
+                    MemoryStream mstream = new MemoryStream();
+                    imagem.Save(mstream, imagem.RawFormat);
+                    mstream.Position = 0;
 
-                imgByte = br.ReadBytes((int)mstream.Length);
+                    BinaryReader br = new BinaryReader(mstream);
+
+                    imgByte = br.ReadBytes((int)mstream.Length);
+                }
 
                 command.Parameters.AddWithValue("@imagem", imgByte);
                 command.Parameters.AddWithValue("@idItem", item.getIdItem());

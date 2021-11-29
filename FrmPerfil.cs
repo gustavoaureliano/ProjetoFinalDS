@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Threading;
 using ProjetoFinalDS.dao;
 using ProjetoFinalDS.model;
+using System.Resources;
 
 namespace ProjetoFinalDS
 {
@@ -36,9 +37,19 @@ namespace ProjetoFinalDS
 
         private void FrmPerfil_Load(object sender, EventArgs e)
         {
-            pbImagemPerfil.Image = usuario.getImagem();
+            ResourceManager resources = Properties.Resources.ResourceManager;
+
             txtNome.Text = usuario.getNome();
             txtUsuario.Text = usuario.getUsuario();
+            Image img = usuario.getImagem();
+            if (img != null)
+            {
+                pbImagemPerfil.Image = img;
+            }
+            else
+            {
+                pbImagemPerfil.Image = (Image)resources.GetObject("usuario");
+            }
 
             pbImagemPerfil.AllowDrop = true;
         }
@@ -76,8 +87,20 @@ namespace ProjetoFinalDS
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
+            t1 = new Thread(() => AbrirHome(usuario));
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
         }
 
+        private void AbrirHome(Usuario usuario)
+        {
+            Application.Run(new FrmHome());
+        }
+
+        private void AbrirColecoes(Usuario usuario)
+        {
+            Application.Run(new FrmColecoes(usuario));
+        }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -85,10 +108,16 @@ namespace ProjetoFinalDS
 
             usuario.setNome(txtNome.Text.ToString());
             usuario.setUsuario(txtUsuario.Text.ToString());
-            usuario.setSenha(txtSenha.Text.ToString());
+            String senha = txtSenha.Text.ToString();
+            if (senha != null && senha.Length > 0)
+                usuario.setSenha(senha);
             usuario.setImagem(pbImagemPerfil.Image);
 
             usuarioDao.atualizar(usuario);
+            this.Close();
+            t1 = new Thread(() => AbrirColecoes(usuario));
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
         }
 
         private void btnInserirFoto_Click(object sender, EventArgs e)
