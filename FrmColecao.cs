@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Threading;
 using ProjetoFinalDS.model;
 using ProjetoFinalDS.dao;
+using System.Resources;
 
 namespace ProjetoFinalDS
 {
@@ -39,7 +40,18 @@ namespace ProjetoFinalDS
 
         private void FrmColecao_Load(object sender, EventArgs e)
         {
+            ResourceManager resources = Properties.Resources.ResourceManager;
+
             txtNome.Text = usuario.getNome();
+            Image img = usuario.getImagem();
+            if (img != null)
+            {
+                pbUsuario.Image = img;
+            }
+            else
+            {
+                pbUsuario.Image = (Image)resources.GetObject("usuario");
+            }
             pbUsuario.Image = usuario.getImagem();
             lblNomeColecao.Text = "Coleção - " + colecao.getNome();
             String dataFormat = "d";
@@ -78,9 +90,18 @@ namespace ProjetoFinalDS
             {
                 itens = itemDAO.buscarTodos(colecao);
             }
+
+            ResourceManager resources = Properties.Resources.ResourceManager;
+
             foreach (Item item in itens)
             {
-                imgList.Images.Add(item.getImagem());
+                Image img = item.getImagem();
+                if (img != null)
+                    imgList.Images.Add(item.getImagem());
+                else
+                {
+                    imgList.Images.Add((Image)resources.GetObject("sem_foto"));
+                }
                 ListViewItem lVItem = new ListViewItem(item.getNome(), cont);
                 lVItem.Tag = item;
                 lvItens.Items.Add(lVItem);

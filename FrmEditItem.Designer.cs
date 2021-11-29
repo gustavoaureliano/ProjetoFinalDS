@@ -39,11 +39,9 @@ namespace ProjetoFinalDS
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.pbImagem = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.btnInserirImagem = new System.Windows.Forms.Button();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -116,7 +114,7 @@ namespace ProjetoFinalDS
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(89, 282);
+            this.label4.Location = new System.Drawing.Point(89, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 20);
             this.label4.TabIndex = 33;
@@ -143,21 +141,11 @@ namespace ProjetoFinalDS
             // txtDescricao
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.Location = new System.Drawing.Point(89, 305);
+            this.txtDescricao.Location = new System.Drawing.Point(89, 230);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(294, 117);
             this.txtDescricao.TabIndex = 34;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(89, 198);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Categoria";
             // 
             // pbImagem
             // 
@@ -168,6 +156,7 @@ namespace ProjetoFinalDS
             this.pbImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImagem.TabIndex = 51;
             this.pbImagem.TabStop = false;
+            this.pbImagem.Click += new System.EventHandler(this.pbImagem_Click);
             this.pbImagem.DragDrop += new System.Windows.Forms.DragEventHandler(this.pbImagem_DragDrop);
             this.pbImagem.DragEnter += new System.Windows.Forms.DragEventHandler(this.pbImagem_DragEnter);
             // 
@@ -188,7 +177,7 @@ namespace ProjetoFinalDS
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSalvar.Location = new System.Drawing.Point(540, 404);
+            this.btnSalvar.Location = new System.Drawing.Point(553, 416);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(178, 42);
             this.btnSalvar.TabIndex = 49;
@@ -196,25 +185,19 @@ namespace ProjetoFinalDS
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // cbCategoria
-            // 
-            this.cbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.ItemHeight = 24;
-            this.cbCategoria.Location = new System.Drawing.Point(89, 221);
-            this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(294, 32);
-            this.cbCategoria.TabIndex = 52;
-            // 
             // btnInserirImagem
             // 
-            this.btnInserirImagem.Location = new System.Drawing.Point(597, 349);
+            this.btnInserirImagem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnInserirImagem.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnInserirImagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInserirImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserirImagem.ForeColor = System.Drawing.Color.Black;
+            this.btnInserirImagem.Location = new System.Drawing.Point(589, 354);
             this.btnInserirImagem.Name = "btnInserirImagem";
-            this.btnInserirImagem.Size = new System.Drawing.Size(75, 23);
-            this.btnInserirImagem.TabIndex = 53;
+            this.btnInserirImagem.Size = new System.Drawing.Size(97, 27);
+            this.btnInserirImagem.TabIndex = 74;
             this.btnInserirImagem.Text = "Inserir foto";
-            this.btnInserirImagem.UseVisualStyleBackColor = true;
-            this.btnInserirImagem.Click += new System.EventHandler(this.btnInserirImagem_Click);
+            this.btnInserirImagem.UseVisualStyleBackColor = false;
             // 
             // FrmEditItem
             // 
@@ -222,11 +205,9 @@ namespace ProjetoFinalDS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 491);
             this.Controls.Add(this.btnInserirImagem);
-            this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.pbImagem);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNome);
@@ -258,11 +239,9 @@ namespace ProjetoFinalDS
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pbImagem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.ComboBox cbCategoria;
         private System.Windows.Forms.Button btnInserirImagem;
     }
 }

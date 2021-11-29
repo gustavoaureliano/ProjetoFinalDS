@@ -124,7 +124,16 @@ namespace ProjetoFinalDS.dao
                         item.setNome(reader["nome"].ToString());
                         item.setDescricao(reader["descricao"].ToString());
 
-                        byte[] img = (byte[])(reader["imagem"]);
+                        byte[] img = null;
+
+                        try
+                        {
+                            img = (byte[])(reader["imagem"]);
+                        }
+                        catch
+                        {
+
+                        }
 
                         if (img != null)
                         {
@@ -182,7 +191,16 @@ namespace ProjetoFinalDS.dao
                         item.setNome(reader["nome"].ToString());
                         item.setDescricao(reader["descricao"].ToString());
 
-                        byte[] img = (byte[])(reader["imagem"]);
+                        byte[] img = null;
+
+                        try
+                        {
+                            img = (byte[])(reader["imagem"]);
+                        }
+                        catch
+                        {
+
+                        }
 
                         if (img != null)
                         {
@@ -236,7 +254,16 @@ namespace ProjetoFinalDS.dao
                         item.setNome(reader["nome"].ToString());
                         item.setDescricao(reader["descricao"].ToString());
 
-                        byte[] img = (byte[])(reader["imagem"]);
+                        byte[] img = null;
+
+                        try
+                        {
+                            img = (byte[])(reader["imagem"]);
+                        }
+                        catch
+                        {
+
+                        }
 
                         if (img != null)
                         {

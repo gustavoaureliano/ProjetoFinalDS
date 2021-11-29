@@ -94,7 +94,7 @@ namespace ProjetoFinalDS
         private void btnInserirFoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "JPG Files(.jpg)|.jpg|PNG Files(.png)|.png|AllFiles(.)|.";
+            dialog.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|AllFiles(*.*)|*.*";
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {

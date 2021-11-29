@@ -1,4 +1,5 @@
-﻿using ProjetoFinalDS.model;
+﻿using ProjetoFinalDS.dao;
+using ProjetoFinalDS.model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,10 +23,12 @@ namespace ProjetoFinalDS
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
+        private Item item;
 
-        public FrmAddItem()
+        public FrmAddItem(Item item)
         {
             InitializeComponent();
+            this.item = item;
         }
 
         private void FrmAddItem_MouseMove(object sender, MouseEventArgs e)
@@ -49,7 +52,47 @@ namespace ProjetoFinalDS
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            Item item = new Item();
+            ItemDAO itemdao = new ItemDAO();
 
+            item.setNome(txtNome.Text.ToString());
+            item.setDescricao(txtDesc.Text.ToString());
+            item.setImagem(pbImagemItem.Image);
+
+            itemdao.atualizar(item);
+        }
+
+        private void btnInserirFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|AllFiles(*.*)|*.*";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                String URLFoto = dialog.FileName.ToString();
+                Image img = Image.FromFile(URLFoto);
+
+                pbImagemItem.ImageLocation = URLFoto;
+                item.setImagem(img);
+            }
+        }
+
+        private void pbImagemItem_DragDrop(object sender, DragEventArgs e)
+        {
+            var data = e.Data.GetData(DataFormats.FileDrop);
+            if (data != null)
+            {
+                String[] fileNames = (String[])data;
+                Image img = Image.FromFile(fileNames[0]);
+
+                pbImagemItem.Image = img;
+                item.setImagem(img);
+            }
+        }
+
+        private void pbImagemItem_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Copy;
         }
     }
 }
