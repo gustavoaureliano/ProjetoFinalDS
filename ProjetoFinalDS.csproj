@@ -183,6 +183,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -197,6 +198,38 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\imagem_login_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem_login_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem_login_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem_login_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem_login_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem_login_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem_login_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem cadastro 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem cadastro 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem cadastro 3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem cadastro 4.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

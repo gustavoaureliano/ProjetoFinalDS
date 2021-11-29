@@ -12,6 +12,7 @@ using System.Threading;
 using ProjetoFinalDS.dao;
 using ProjetoFinalDS.model;
 using System.Collections;
+using System.Resources;
 
 namespace ProjetoFinalDS
 {
@@ -30,24 +31,31 @@ namespace ProjetoFinalDS
         public FrmLogin()
         {
             InitializeComponent();
+        }
 
-            ArrayList imagens = new ArrayList();
-            imagens.Add(@"H:\Imagens\Projeto Final DS\com tamanho certo\imagem login 7.jpg");
-            imagens.Add(@"H:\Imagens\Projeto Final DS\com tamanho certo\imagem login 5.jpg");
-            imagens.Add(@"H:\Imagens\Projeto Final DS\com tamanho certo\imagem login 1.jpg");
-            imagens.Add(@"H:\Imagens\Projeto Final DS\com tamanho certo\imagem login 2.png");
-            imagens.Add(@"H:\Imagens\Projeto Final DS\com tamanho certo\imagem login 3.jpg");
-            imagens.Add(@"H:\Imagens\Projeto Final DS\com tamanho certo\login gon.jpg");
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            List<Image> imagens = new List<Image>();
 
+            ResourceManager resources = Properties.Resources.ResourceManager;
+            imagens.Add((Image)resources.GetObject("imagem_login_1"));
+            imagens.Add((Image)resources.GetObject("imagem_login_2"));
+            imagens.Add((Image)resources.GetObject("imagem_login_3"));
+            imagens.Add((Image)resources.GetObject("imagem_login_4"));
+            imagens.Add((Image)resources.GetObject("imagem_login_5"));
+            imagens.Add((Image)resources.GetObject("imagem_login_6"));
+            imagens.Add((Image)resources.GetObject("imagem_login_7"));
 
             Random rand = new Random();
-            int num = rand.Next(6);
-            imagemLateral.Load("" + imagens[num]);
+            int num = rand.Next(7);
+            imagemLateral.Image = imagens[num];
         }
+
+
 
         private void label4_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void lblLinkCadas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -126,6 +134,5 @@ namespace ProjetoFinalDS
         {
             Application.Run(new FrmColecoes(usuario));
         }
-
     }
 }
