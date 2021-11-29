@@ -33,7 +33,7 @@ namespace ProjetoFinalDS
             this.lblLinkLog = new System.Windows.Forms.LinkLabel();
             this.lblFrase2 = new System.Windows.Forms.Label();
             this.lblTit2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imagemLateral = new System.Windows.Forms.PictureBox();
             this.linkVoltar = new System.Windows.Forms.LinkLabel();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
@@ -44,7 +44,7 @@ namespace ProjetoFinalDS
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagemLateral)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.SuspendLayout();
@@ -86,16 +86,16 @@ namespace ProjetoFinalDS
             this.lblTit2.Text = "Faça Seu Cadastro";
             this.lblTit2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pictureBox1
+            // imagemLateral
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(368, 527);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.imagemLateral.Dock = System.Windows.Forms.DockStyle.Left;
+            this.imagemLateral.Image = ((System.Drawing.Image)(resources.GetObject("imagemLateral.Image")));
+            this.imagemLateral.Location = new System.Drawing.Point(0, 0);
+            this.imagemLateral.Name = "imagemLateral";
+            this.imagemLateral.Size = new System.Drawing.Size(368, 527);
+            this.imagemLateral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.imagemLateral.TabIndex = 18;
+            this.imagemLateral.TabStop = false;
             // 
             // linkVoltar
             // 
@@ -152,10 +152,11 @@ namespace ProjetoFinalDS
             // 
             // txtSenha
             // 
-            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(404, 302);
+            this.txtSenha.Multiline = true;
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(353, 31);
+            this.txtSenha.Size = new System.Drawing.Size(353, 32);
             this.txtSenha.TabIndex = 29;
             // 
             // lblSenha
@@ -170,10 +171,11 @@ namespace ProjetoFinalDS
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(404, 230);
+            this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(353, 31);
+            this.txtUsuario.Size = new System.Drawing.Size(353, 32);
             this.txtUsuario.TabIndex = 27;
             // 
             // lblUsuario
@@ -188,10 +190,11 @@ namespace ProjetoFinalDS
             // 
             // txtNome
             // 
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(404, 157);
+            this.txtNome.Multiline = true;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(353, 31);
+            this.txtNome.Size = new System.Drawing.Size(353, 32);
             this.txtNome.TabIndex = 31;
             // 
             // lblNome
@@ -222,13 +225,14 @@ namespace ProjetoFinalDS
             this.Controls.Add(this.lblLinkLog);
             this.Controls.Add(this.lblFrase2);
             this.Controls.Add(this.lblTit2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.imagemLateral);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCadastro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
             this.Load += new System.EventHandler(this.FrmCadastro_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmCadastro_MouseMove);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagemLateral)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.ResumeLayout(false);
@@ -240,7 +244,7 @@ namespace ProjetoFinalDS
         private System.Windows.Forms.LinkLabel lblLinkLog;
         private System.Windows.Forms.Label lblFrase2;
         private System.Windows.Forms.Label lblTit2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imagemLateral;
         private System.Windows.Forms.LinkLabel linkVoltar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.PictureBox btnMinimizar;

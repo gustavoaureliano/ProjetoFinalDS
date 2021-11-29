@@ -160,6 +160,7 @@ namespace ProjetoFinalDS
             this.Controls.Add(this.listView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAltColecao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alterar coleção";
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAltColecao_MouseMove);
             this.panelTop.ResumeLayout(false);

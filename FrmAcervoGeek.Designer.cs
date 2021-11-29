@@ -134,6 +134,7 @@ namespace ProjetoFinalDS
             this.Controls.Add(this.lblPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAcervoGeek";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAcervoGeek";
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAcervoGeek_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
