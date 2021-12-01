@@ -76,6 +76,7 @@ namespace ProjetoFinalDS
             lvItens.Items.Clear();
 
             ImageList imgList = new ImageList();
+            imgList.ColorDepth = ColorDepth.Depth32Bit;
             imgList.ImageSize = new Size(200, 200);
 
             ItemDAO itemDAO = new ItemDAO();
@@ -203,14 +204,14 @@ namespace ProjetoFinalDS
         private void txtNome_Click(object sender, EventArgs e)
         {
             this.Close();
-            t1 = new Thread(() => abrirPerfil(usuario));
+            t1 = new Thread(() => abrirPerfil(usuario, colecao));
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
         }
 
-        private void abrirPerfil(Usuario usuario)
+        private void abrirPerfil(Usuario usuario, Colecao colecao)
         {
-            Application.Run(new FrmPerfil(usuario));
+            Application.Run(new FrmPerfil(usuario, colecao));
         }
     }
 }

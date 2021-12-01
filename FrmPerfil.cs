@@ -28,11 +28,13 @@ namespace ProjetoFinalDS
 
         Thread t1;
         private Usuario usuario;
+        private Colecao colecao;
 
-        public FrmPerfil(Usuario usuario)
+        public FrmPerfil(Usuario usuario, Colecao colecao)
         {
             InitializeComponent();
             this.usuario = usuario;
+            this.colecao = colecao;
         }
 
         private void FrmPerfil_Load(object sender, EventArgs e)
@@ -68,6 +70,9 @@ namespace ProjetoFinalDS
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
+            t1 = new Thread(() => AbirAnterior(usuario, colecao));
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -97,9 +102,15 @@ namespace ProjetoFinalDS
             Application.Run(new FrmHome());
         }
 
-        private void AbrirColecoes(Usuario usuario)
+        private void AbirAnterior(Usuario usuario, Colecao colecao)
         {
-            Application.Run(new FrmColecoes(usuario));
+            if (colecao != null)
+            {
+                Application.Run(new FrmColecao(usuario, colecao));
+            } else
+            {
+                Application.Run(new FrmColecoes(usuario));
+            }
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -115,7 +126,7 @@ namespace ProjetoFinalDS
 
             usuarioDao.atualizar(usuario);
             this.Close();
-            t1 = new Thread(() => AbrirColecoes(usuario));
+            t1 = new Thread(() => AbirAnterior(usuario, colecao));
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
         }

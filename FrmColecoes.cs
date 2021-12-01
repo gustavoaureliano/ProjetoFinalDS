@@ -66,6 +66,7 @@ namespace ProjetoFinalDS
             lvColecoes.Items.Clear();
 
             ImageList imgList = new ImageList();
+            imgList.ColorDepth = ColorDepth.Depth32Bit;
             imgList.ImageSize = new Size(200, 200);
 
             ColecaoDAO colecaoDaO = new ColecaoDAO();
@@ -191,7 +192,7 @@ namespace ProjetoFinalDS
 
         private void abrirPerfil(Usuario usuario)
         {
-            Application.Run(new FrmPerfil(usuario));
+            Application.Run(new FrmPerfil(usuario, null));
         }
     }
 }
