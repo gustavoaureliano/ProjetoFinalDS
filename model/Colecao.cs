@@ -10,13 +10,13 @@ namespace ProjetoFinalDS.model
     public class Colecao
     {
 
-        int idColecao;
-        int idUsuario;
-        String nome;
-        String descricao;
-        Image imagem;
-        DateTime dataCriacao;
-        DateTime dataAlteracao;
+        private int idColecao;
+        private int idUsuario;
+        private String nome;
+        private String descricao;
+        private Image imagem;
+        private DateTime dataCriacao;
+        private DateTime dataAlteracao;
 
         public int getIdColecao()
         {

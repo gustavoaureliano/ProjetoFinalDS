@@ -43,6 +43,7 @@ namespace ProjetoFinalDS
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.PictureBox();
             this.btnInserirFoto = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagemColec)).BeginInit();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -197,11 +198,23 @@ namespace ProjetoFinalDS
             this.btnInserirFoto.UseVisualStyleBackColor = false;
             this.btnInserirFoto.Click += new System.EventHandler(this.btnInserirFoto_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(89, 122);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 20);
+            this.label2.TabIndex = 74;
+            this.label2.Text = "Nome da Coleção";
+            // 
             // FrmAddColecao
             // 
+            this.AcceptButton = this.btnSalvar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 491);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnInserirFoto);
             this.Controls.Add(this.pbImagemColec);
             this.Controls.Add(this.label1);
@@ -242,5 +255,6 @@ namespace ProjetoFinalDS
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Button btnInserirFoto;
+        private System.Windows.Forms.Label label2;
     }
 }

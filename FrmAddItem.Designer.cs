@@ -30,7 +30,6 @@ namespace ProjetoFinalDS
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddItem));
-            this.pbImagemItem = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -41,26 +40,18 @@ namespace ProjetoFinalDS
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.PictureBox();
             this.btnInserirFoto = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.txtDesc = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagemItem)).BeginInit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnAddCategoria = new System.Windows.Forms.Button();
+            this.pbImagemItem = new System.Windows.Forms.PictureBox();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagemItem)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbImagemItem
-            // 
-            this.pbImagemItem.Image = ((System.Drawing.Image)(resources.GetObject("pbImagemItem.Image")));
-            this.pbImagemItem.Location = new System.Drawing.Point(507, 171);
-            this.pbImagemItem.Name = "pbImagemItem";
-            this.pbImagemItem.Size = new System.Drawing.Size(207, 195);
-            this.pbImagemItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbImagemItem.TabIndex = 61;
-            this.pbImagemItem.TabStop = false;
-            this.pbImagemItem.DragDrop += new System.Windows.Forms.DragEventHandler(this.pbImagemItem_DragDrop);
-            this.pbImagemItem.DragEnter += new System.Windows.Forms.DragEventHandler(this.pbImagemItem_DragEnter);
             // 
             // label1
             // 
@@ -79,7 +70,7 @@ namespace ProjetoFinalDS
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSalvar.Location = new System.Drawing.Point(152, 406);
+            this.btnSalvar.Location = new System.Drawing.Point(147, 406);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(178, 42);
             this.btnSalvar.TabIndex = 59;
@@ -179,32 +170,85 @@ namespace ProjetoFinalDS
             this.btnInserirFoto.UseVisualStyleBackColor = false;
             this.btnInserirFoto.Click += new System.EventHandler(this.btnInserirFoto_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(89, 190);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 20);
+            this.label4.TabIndex = 79;
+            this.label4.Text = "Categoria";
+            // 
+            // cbCategoria
+            // 
+            this.cbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCategoria.FormattingEnabled = true;
+            this.cbCategoria.Location = new System.Drawing.Point(89, 213);
+            this.cbCategoria.Name = "cbCategoria";
+            this.cbCategoria.Size = new System.Drawing.Size(241, 28);
+            this.cbCategoria.TabIndex = 78;
+            // 
             // txtDesc
             // 
             this.txtDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDesc.Location = new System.Drawing.Point(89, 223);
+            this.txtDesc.Location = new System.Drawing.Point(89, 281);
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(294, 117);
-            this.txtDesc.TabIndex = 75;
+            this.txtDesc.Size = new System.Drawing.Size(294, 89);
+            this.txtDesc.TabIndex = 77;
             // 
-            // label2
+            // label6
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(89, 200);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 20);
-            this.label2.TabIndex = 74;
-            this.label2.Text = "Descrição";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(89, 258);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 20);
+            this.label6.TabIndex = 76;
+            this.label6.Text = "Descrição";
+            // 
+            // btnAddCategoria
+            // 
+            this.btnAddCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddCategoria.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAddCategoria.FlatAppearance.BorderSize = 0;
+            this.btnAddCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCategoria.ForeColor = System.Drawing.Color.Black;
+            this.btnAddCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCategoria.Image")));
+            this.btnAddCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddCategoria.Location = new System.Drawing.Point(341, 209);
+            this.btnAddCategoria.Name = "btnAddCategoria";
+            this.btnAddCategoria.Size = new System.Drawing.Size(42, 37);
+            this.btnAddCategoria.TabIndex = 80;
+            this.btnAddCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddCategoria.UseVisualStyleBackColor = false;
+            this.btnAddCategoria.Click += new System.EventHandler(this.btnAddCategoria_Click);
+            // 
+            // pbImagemItem
+            // 
+            this.pbImagemItem.Image = ((System.Drawing.Image)(resources.GetObject("pbImagemItem.Image")));
+            this.pbImagemItem.Location = new System.Drawing.Point(507, 171);
+            this.pbImagemItem.Name = "pbImagemItem";
+            this.pbImagemItem.Size = new System.Drawing.Size(207, 195);
+            this.pbImagemItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImagemItem.TabIndex = 61;
+            this.pbImagemItem.TabStop = false;
+            this.pbImagemItem.DragDrop += new System.Windows.Forms.DragEventHandler(this.pbImagemItem_DragDrop);
+            this.pbImagemItem.DragEnter += new System.Windows.Forms.DragEventHandler(this.pbImagemItem_DragEnter);
             // 
             // FrmAddItem
             // 
+            this.AcceptButton = this.btnSalvar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 491);
+            this.Controls.Add(this.btnAddCategoria);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.txtDesc);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnInserirFoto);
             this.Controls.Add(this.pbImagemItem);
             this.Controls.Add(this.label1);
@@ -218,11 +262,11 @@ namespace ProjetoFinalDS
             this.Text = "Adicionar novo item";
             this.Load += new System.EventHandler(this.FrmAddItem_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAddItem_MouseMove);
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagemItem)).EndInit();
             this.panelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagemItem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,7 +284,10 @@ namespace ProjetoFinalDS
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Button btnInserirFoto;
+        private System.Windows.Forms.Button btnAddCategoria;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbCategoria;
         private System.Windows.Forms.TextBox txtDesc;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label6;
     }
 }

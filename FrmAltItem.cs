@@ -62,13 +62,14 @@ namespace ProjetoFinalDS
             int cont = 0;
 
             List<Item> itens = null;
+            Categoria categoria = new Categoria();
             if (chave != null && chave.Length > 0)
             {
-                itens = itemDAO.buscarTodos(colecao, chave);
+                itens = itemDAO.buscarTodos(colecao, categoria, chave);
             }
             else
             {
-                itens = itemDAO.buscarTodos(colecao);
+                itens = itemDAO.buscarTodos(colecao, categoria);
             }
 
             ResourceManager resources = Properties.Resources.ResourceManager;
@@ -125,11 +126,18 @@ namespace ProjetoFinalDS
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Item item = (Item)lvItens.SelectedItems[0].Tag;
-            t1 = new Thread(() => abrirEditarItem(usuario, colecao, item));
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
+            try
+            {
+                Item item = (Item)lvItens.SelectedItems[0].Tag;
+                t1 = new Thread(() => abrirEditarItem(usuario, colecao, item));
+                t1.SetApartmentState(ApartmentState.STA);
+                t1.Start();
+                this.Close();
+            } 
+            catch
+            {
+
+            }
         }
 
         private void abrirEditarItem(Usuario usuario, Colecao colecao, Item item)

@@ -53,9 +53,9 @@ namespace ProjetoFinalDS
             // pbImagem
             // 
             this.pbImagem.Image = ((System.Drawing.Image)(resources.GetObject("pbImagem.Image")));
-            this.pbImagem.Location = new System.Drawing.Point(540, 153);
+            this.pbImagem.Location = new System.Drawing.Point(507, 171);
             this.pbImagem.Name = "pbImagem";
-            this.pbImagem.Size = new System.Drawing.Size(191, 178);
+            this.pbImagem.Size = new System.Drawing.Size(207, 195);
             this.pbImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImagem.TabIndex = 48;
             this.pbImagem.TabStop = false;
@@ -66,7 +66,7 @@ namespace ProjetoFinalDS
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(520, 119);
+            this.label1.Location = new System.Drawing.Point(503, 138);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 20);
             this.label1.TabIndex = 47;
@@ -79,7 +79,7 @@ namespace ProjetoFinalDS
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSalvar.Location = new System.Drawing.Point(553, 416);
+            this.btnSalvar.Location = new System.Drawing.Point(147, 407);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(178, 42);
             this.btnSalvar.TabIndex = 46;
@@ -191,7 +191,7 @@ namespace ProjetoFinalDS
             this.btnInserirImagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInserirImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserirImagem.ForeColor = System.Drawing.Color.Black;
-            this.btnInserirImagem.Location = new System.Drawing.Point(589, 354);
+            this.btnInserirImagem.Location = new System.Drawing.Point(563, 393);
             this.btnInserirImagem.Name = "btnInserirImagem";
             this.btnInserirImagem.Size = new System.Drawing.Size(97, 27);
             this.btnInserirImagem.TabIndex = 75;
@@ -200,6 +200,7 @@ namespace ProjetoFinalDS
             // 
             // FrmEditColecao
             // 
+            this.AcceptButton = this.btnSalvar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 491);

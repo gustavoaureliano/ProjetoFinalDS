@@ -70,15 +70,17 @@ namespace ProjetoFinalDS.dao
         {
             if (conn.State == ConnectionState.Open)
             {
-                String sqlDelete = "delete from colecao where idColecao = @idColecao";
+                String sqlDelete = "usp_excluirColecao";
 
                 MySqlCommand command = new MySqlCommand(sqlDelete, conn);
+                command.CommandType = CommandType.StoredProcedure;
+
                 command.Parameters.AddWithValue("@idColecao", colecao.getIdColecao());
 
                 try
                 {
                     int i = command.ExecuteNonQuery();
-                    if (i > 0)
+                    if (i >= 0)
                     {
                         MessageBox.Show("Coleção excluída com sucesso!");
                     }

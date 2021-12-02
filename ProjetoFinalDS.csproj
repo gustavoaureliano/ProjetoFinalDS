@@ -58,6 +58,12 @@
     <Compile Include="FrmAcervoGeek.Designer.cs">
       <DependentUpon>FrmAcervoGeek.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAddCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddCategoria.Designer.cs">
+      <DependentUpon>FrmAddCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAddColecao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAcervoGeek.resx">
       <DependentUpon>FrmAcervoGeek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddCategoria.resx">
+      <DependentUpon>FrmAddCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddColecao.resx">
       <DependentUpon>FrmAddColecao.cs</DependentUpon>

@@ -17,7 +17,7 @@ namespace ProjetoFinalDS.dao
 
         private MySqlConnection conn = ConexaoBD.obterConxao();
 
-        public void cadastrarUsuario(Usuario usuario)
+        public int cadastrarUsuario(Usuario usuario)
         {
             if (conn.State == ConnectionState.Open)
             {
@@ -31,25 +31,32 @@ namespace ProjetoFinalDS.dao
                 command.Parameters.AddWithValue("@nome", usuario.getNome());
                 command.Parameters.AddWithValue("@senha", usuario.getSenha());
 
-                /*Image imagem = usuario.getImagem();
-
-                MemoryStream mstream = new MemoryStream();
-                imagem.Save(mstream, imagem.RawFormat);
-                mstream.Position = 0;
-
-                BinaryReader br = new BinaryReader(mstream);
-                byte[] imgByte = null;
-
-                imgByte = br.ReadBytes((int)mstream.Length);*/
-
                 command.Parameters.AddWithValue("@foto", null);
 
                 try
                 {
                     int i = command.ExecuteNonQuery();
-                    if (i > 0)
+                    if (i >= 0)
                     {
                         MessageBox.Show("Usuario cadastrado com sucesso!");
+                        String sqlQuery = "select last_insert_id()";
+                        MySqlCommand command2 = new MySqlCommand(sqlQuery, conn);
+
+                        MySqlDataReader reader;
+
+                        try
+                        {
+                            reader = command2.ExecuteReader();
+                            if (reader.Read())
+                            {
+                                int idUsuario = int.Parse(reader[0].ToString());
+                                usuario.setIdUsuario(idUsuario);
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            MessageBox.Show("Erro: " + e.ToString());
+                        }
                     }
                 }
                 catch (Exception e)
@@ -62,6 +69,7 @@ namespace ProjetoFinalDS.dao
                 }
 
             }
+            return usuario.getIdUsuario();
         }
 
         public Usuario buscar(Usuario usuario)
@@ -85,7 +93,16 @@ namespace ProjetoFinalDS.dao
                         usuario.setNome(reader["nome"].ToString());
                         usuario.setSenha(reader["senha"].ToString());
 
-                        byte[] img = (byte[])(reader["foto"]);
+                        byte[] img = null;
+
+                        try
+                        {
+                            img = (byte[])(reader["foto"]);
+                        }
+                        catch
+                        {
+
+                        }
 
                         if (img != null)
                         {
@@ -133,7 +150,16 @@ namespace ProjetoFinalDS.dao
                         usuario.setSenha(reader["senha"].ToString());
                         MessageBox.Show("idUsuario: " + reader["idUsuario"].ToString());
 
-                        byte[] img = (byte[])(reader["foto"]);
+                        byte[] img = null;
+
+                        try
+                        {
+                            img = (byte[])(reader["foto"]);
+                        }
+                        catch
+                        {
+
+                        }
 
                         if (img != null)
                         {

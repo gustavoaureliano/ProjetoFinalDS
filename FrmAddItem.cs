@@ -43,6 +43,26 @@ namespace ProjetoFinalDS
         private void FrmAddItem_Load(object sender, EventArgs e)
         {
             pbImagemItem.AllowDrop = true;
+            atualizarCategorias();
+        }
+
+        public void atualizarCategorias()
+        {
+            CategoriaDAO categoriaDAO = new CategoriaDAO();
+            List<Categoria> categorias = new List<Categoria>();
+            Categoria catNull = new Categoria();
+            catNull.setNome("Nenhuma");
+            categorias.Add(catNull);
+            categorias.AddRange(categoriaDAO.buscarTodos(colecao));
+
+            cbCategoria.Items.Clear();
+            cbCategoria.Tag = categorias;
+
+            foreach (Categoria categoria in categorias)
+            {
+                cbCategoria.Items.Add(categoria);
+            }
+            cbCategoria.SelectedItem = catNull;
         }
 
         private void FrmAddItem_MouseMove(object sender, MouseEventArgs e)
@@ -78,6 +98,9 @@ namespace ProjetoFinalDS
 
             item.setNome(txtNome.Text.ToString());
             item.setDescricao(txtDesc.Text.ToString());
+            int idxCategoria = cbCategoria.SelectedIndex;
+            Categoria categoria = ((List<Categoria>)cbCategoria.Tag)[idxCategoria];
+            item.setIdCategoria(categoria.getIdCategoria());
             item.setImagem(pbImagemItem.Image);
 
             itemdao.incluir(item);
@@ -120,5 +143,10 @@ namespace ProjetoFinalDS
             e.Effect = DragDropEffects.Copy;
         }
 
+        private void btnAddCategoria_Click(object sender, EventArgs e)
+        {
+            FrmAddCategoria addCategoria = new FrmAddCategoria(colecao, cbCategoria);
+            addCategoria.ShowDialog();
+        }
     }
 }

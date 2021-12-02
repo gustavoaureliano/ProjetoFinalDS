@@ -43,6 +43,7 @@ namespace ProjetoFinalDS
             ResourceManager resources = Properties.Resources.ResourceManager;
 
             txtNome.Text = usuario.getNome();
+
             Image img = usuario.getImagem();
             if (img != null)
             {
@@ -53,7 +54,6 @@ namespace ProjetoFinalDS
                 pbUsuario.Image = (Image)resources.GetObject("usuario");
             }
 
-            pbUsuario.Image = usuario.getImagem();
             lblNomeColecao.Text = "Coleção - " + colecao.getNome();
             String dataFormat = "d";
             txtDataAlteracao.Text = colecao.getDataAlteracao().ToString(dataFormat);
@@ -67,7 +67,25 @@ namespace ProjetoFinalDS
             lvItens.Columns.Add("Itens", 100);
             lvItens.AutoResizeColumn(0, ColumnHeaderAutoResizeStyle.HeaderSize);
 
+            atualizarCategorias();
             listarImgs(null);
+        }
+
+        public void atualizarCategorias()
+        {
+            CategoriaDAO categoriaDAO = new CategoriaDAO();
+            List<Categoria> categorias = new List<Categoria>();
+            Categoria catNull = new Categoria();
+            catNull.setNome("Nenhuma");
+            categorias.Add(catNull);
+            categorias.AddRange(categoriaDAO.buscarTodos(colecao));
+            cbCategoria.Items.Clear();
+            cbCategoria.Tag = categorias;
+            foreach (Categoria categoria in categorias)
+            {
+                cbCategoria.Items.Add(categoria);
+            }
+            cbCategoria.SelectedItem = catNull;
         }
 
         public void listarImgs(String chave)
@@ -84,13 +102,14 @@ namespace ProjetoFinalDS
             int cont = 0;
 
             List<Item> itens = null;
+            Categoria categoriaSelecionada = (Categoria)cbCategoria.SelectedItem;
             if (chave != null && chave.Length > 0)
             {
-                itens = itemDAO.buscarTodos(colecao, chave);
+                itens = itemDAO.buscarTodos(colecao, categoriaSelecionada, chave);
             }
             else
             {
-                itens = itemDAO.buscarTodos(colecao);
+                itens = itemDAO.buscarTodos(colecao, categoriaSelecionada);
             }
 
             ResourceManager resources = Properties.Resources.ResourceManager;
@@ -212,6 +231,17 @@ namespace ProjetoFinalDS
         private void abrirPerfil(Usuario usuario, Colecao colecao)
         {
             Application.Run(new FrmPerfil(usuario, colecao));
+        }
+
+        private void cbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listarImgs(null);
+        }
+
+        private void btnAddCategoria_Click(object sender, EventArgs e)
+        {
+            FrmAddCategoria addCategoria = new FrmAddCategoria(colecao, cbCategoria);
+            addCategoria.ShowDialog();
         }
     }
 }

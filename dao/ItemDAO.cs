@@ -99,15 +99,25 @@ namespace ProjetoFinalDS.dao
             }
         }
 
-        public List<Item> buscarTodos(Colecao colecao)
+        public List<Item> buscarTodos(Colecao colecao, Categoria categoria)
         {
             List<Item> itens = new List<Item>();
             if (conn.State == ConnectionState.Open)
             {
-                String sqlSelectAll = "select * from item where idColecao = @idColecao";
-
-                MySqlCommand command = new MySqlCommand(sqlSelectAll, conn);
-                command.Parameters.AddWithValue("@idColecao", colecao.getIdColecao());
+                String sqlSelectAll = "";
+                MySqlCommand command = new MySqlCommand();
+                command.Connection = conn;
+                if (categoria.getIdCategoria() > 0)
+                {
+                    sqlSelectAll = "select * from item where idColecao = @idColecao and idCategoria = @idCategoria";
+                    command.Parameters.AddWithValue("@idColecao", colecao.getIdColecao());
+                    command.Parameters.AddWithValue("@idCategoria", categoria.getIdCategoria());
+                } else
+                {
+                    sqlSelectAll = "select * from item where idColecao = @idColecao";
+                    command.Parameters.AddWithValue("@idColecao", colecao.getIdColecao());
+                }
+                command.CommandText = sqlSelectAll;
 
                 MySqlDataReader reader;
 
@@ -123,7 +133,8 @@ namespace ProjetoFinalDS.dao
                         try
                         {
                             item.setIdCategoria(int.Parse(reader["idCategoria"].ToString()));
-                        } catch (Exception e)
+                        }
+                        catch (Exception e)
                         {
                             Console.WriteLine(e);
                         }
@@ -164,16 +175,28 @@ namespace ProjetoFinalDS.dao
             return itens;
         }
 
-        public List<Item> buscarTodos(Colecao colecao, String chave)
+        public List<Item> buscarTodos(Colecao colecao, Categoria categoria, String chave)
         {
             List<Item> itens = new List<Item>();
             if (conn.State == ConnectionState.Open)
             {
-                String sqlSelectAll = "select * from item where idColecao = @idColecao and upper(nome) like @chave";
-
-                MySqlCommand command = new MySqlCommand(sqlSelectAll, conn);
-                command.Parameters.AddWithValue("@idColecao", colecao.getIdColecao());
-                command.Parameters.AddWithValue("@chave", "%" + chave.ToUpper() + "%");
+                String sqlSelectAll = "";
+                MySqlCommand command = new MySqlCommand();
+                command.Connection = conn;
+                if (categoria.getIdCategoria() > 0)
+                {
+                    sqlSelectAll = "select * from item where idColecao = @idColecao and upper(nome) like @chave and idCategoria = @idCategoria";
+                    command.Parameters.AddWithValue("@idColecao", colecao.getIdColecao());
+                    command.Parameters.AddWithValue("@chave", "%" + chave.ToUpper() + "%");
+                    command.Parameters.AddWithValue("@idCategoria", categoria.getIdCategoria());
+                }
+                else
+                {
+                    sqlSelectAll = "select * from item where idColecao = @idColecao and upper(nome) like @chave";
+                    command.Parameters.AddWithValue("@idColecao", colecao.getIdColecao());
+                    command.Parameters.AddWithValue("@chave", "%" + chave.ToUpper() + "%");
+                }
+                command.CommandText = sqlSelectAll;
 
                 MySqlDataReader reader;
 

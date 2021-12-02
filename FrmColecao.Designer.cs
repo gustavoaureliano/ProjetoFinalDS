@@ -31,7 +31,6 @@ namespace ProjetoFinalDS
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmColecao));
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
             this.btnDescColecao = new System.Windows.Forms.Button();
             this.lblNomeColecao = new System.Windows.Forms.Label();
@@ -49,8 +48,12 @@ namespace ProjetoFinalDS
             this.btnAdicionarItem = new System.Windows.Forms.Button();
             this.btnAlterarItem = new System.Windows.Forms.Button();
             this.btnAcervoGeek = new System.Windows.Forms.Button();
-            this.pbUsuario = new System.Windows.Forms.PictureBox();
             this.txtNome = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnAddCategoria = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbCategoria = new System.Windows.Forms.ComboBox();
+            this.pbUsuario = new System.Windows.Forms.PictureBox();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
@@ -62,23 +65,10 @@ namespace ProjetoFinalDS
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(378, 116);
+            this.txtSearch.Location = new System.Drawing.Point(306, 116);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(195, 29);
             this.txtSearch.TabIndex = 53;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Silver;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(570, 116);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(47, 29);
-            this.btnSearch.TabIndex = 52;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // panelTop
             // 
@@ -177,6 +167,7 @@ namespace ProjetoFinalDS
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panel2.Controls.Add(this.pbUsuario);
             this.panel2.Controls.Add(this.lblAbrirColecoes);
             this.panel2.Controls.Add(this.txtDataAlteracao);
             this.panel2.Controls.Add(this.txtDataCriacao);
@@ -185,7 +176,6 @@ namespace ProjetoFinalDS
             this.panel2.Controls.Add(this.btnAdicionarItem);
             this.panel2.Controls.Add(this.btnAlterarItem);
             this.panel2.Controls.Add(this.btnAcervoGeek);
-            this.panel2.Controls.Add(this.pbUsuario);
             this.panel2.Controls.Add(this.txtNome);
             this.panel2.Location = new System.Drawing.Point(0, 84);
             this.panel2.Name = "panel2";
@@ -299,18 +289,6 @@ namespace ProjetoFinalDS
             this.btnAcervoGeek.UseVisualStyleBackColor = false;
             this.btnAcervoGeek.Click += new System.EventHandler(this.btnAcervoGeek_Click);
             // 
-            // pbUsuario
-            // 
-            this.pbUsuario.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pbUsuario.Image = ((System.Drawing.Image)(resources.GetObject("pbUsuario.Image")));
-            this.pbUsuario.Location = new System.Drawing.Point(12, 32);
-            this.pbUsuario.Name = "pbUsuario";
-            this.pbUsuario.Size = new System.Drawing.Size(54, 54);
-            this.pbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbUsuario.TabIndex = 62;
-            this.pbUsuario.TabStop = false;
-            this.pbUsuario.Click += new System.EventHandler(this.txtNome_Click);
-            // 
             // txtNome
             // 
             this.txtNome.BackColor = System.Drawing.Color.LightSlateGray;
@@ -324,11 +302,73 @@ namespace ProjetoFinalDS
             this.txtNome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtNome.Click += new System.EventHandler(this.txtNome_Click);
             // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Silver;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.Location = new System.Drawing.Point(498, 116);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(47, 29);
+            this.btnSearch.TabIndex = 52;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnAddCategoria
+            // 
+            this.btnAddCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddCategoria.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAddCategoria.FlatAppearance.BorderSize = 0;
+            this.btnAddCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCategoria.ForeColor = System.Drawing.Color.Black;
+            this.btnAddCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCategoria.Image")));
+            this.btnAddCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddCategoria.Location = new System.Drawing.Point(762, 113);
+            this.btnAddCategoria.Name = "btnAddCategoria";
+            this.btnAddCategoria.Size = new System.Drawing.Size(42, 37);
+            this.btnAddCategoria.TabIndex = 83;
+            this.btnAddCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddCategoria.UseVisualStyleBackColor = false;
+            this.btnAddCategoria.Click += new System.EventHandler(this.btnAddCategoria_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(612, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 20);
+            this.label1.TabIndex = 82;
+            this.label1.Text = "Categoria";
+            // 
+            // cbCategoria
+            // 
+            this.cbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCategoria.FormattingEnabled = true;
+            this.cbCategoria.Location = new System.Drawing.Point(612, 116);
+            this.cbCategoria.Name = "cbCategoria";
+            this.cbCategoria.Size = new System.Drawing.Size(144, 32);
+            this.cbCategoria.TabIndex = 81;
+            this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
+            // 
+            // pbUsuario
+            // 
+            this.pbUsuario.Location = new System.Drawing.Point(12, 35);
+            this.pbUsuario.Name = "pbUsuario";
+            this.pbUsuario.Size = new System.Drawing.Size(54, 54);
+            this.pbUsuario.TabIndex = 71;
+            this.pbUsuario.TabStop = false;
+            // 
             // FrmColecao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 585);
+            this.Controls.Add(this.btnAddCategoria);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.panelTop);
@@ -363,7 +403,6 @@ namespace ProjetoFinalDS
         private System.Windows.Forms.ListView lvItens;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pbUsuario;
         private System.Windows.Forms.Label txtNome;
         private System.Windows.Forms.Button btnAdicionarItem;
         private System.Windows.Forms.Button btnAlterarItem;
@@ -374,5 +413,9 @@ namespace ProjetoFinalDS
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel lblAbrirColecoes;
+        private System.Windows.Forms.Button btnAddCategoria;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbCategoria;
+        private System.Windows.Forms.PictureBox pbUsuario;
     }
 }

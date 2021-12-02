@@ -9,9 +9,9 @@ namespace ProjetoFinalDS.model
     class Categoria
     {
 
-        int idCategoria;
-        int idColecao;
-        String nome;
+        private int idCategoria = 0;
+        private int idColecao;
+        private String nome;
 
         public int getIdCategoria()
         {
@@ -25,7 +25,7 @@ namespace ProjetoFinalDS.model
 
         public int getIdColecao()
         {
-            return idCategoria;
+            return idColecao;
         }
 
         public void setIdColecao(int idColecao)
@@ -41,6 +41,11 @@ namespace ProjetoFinalDS.model
         public void setNome(String nome)
         {
             this.nome = nome;
+        }
+
+        public override string ToString()
+        {
+            return nome;
         }
 
     }

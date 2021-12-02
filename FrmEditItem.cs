@@ -45,7 +45,29 @@ namespace ProjetoFinalDS
             txtNome.Text = item.getNome();
             txtDescricao.Text = item.getDescricao();
             pbImagem.Image = item.getImagem();
-            pbImagem.AllowDrop = true;
+            pbImagem.AllowDrop = true; 
+            atualizarCategorias();
+            List<Categoria> categorias = (List<Categoria>)cbCategoria.Tag;
+            cbCategoria.SelectedItem = categorias.Find(categoria => categoria.getIdCategoria() == item.getIdCategoria());
+        }
+
+        public void atualizarCategorias()
+        {
+            CategoriaDAO categoriaDAO = new CategoriaDAO();
+            List<Categoria> categorias = new List<Categoria>();
+            Categoria catNull = new Categoria();
+            catNull.setNome("Nenhuma");
+            categorias.Add(catNull);
+            categorias.AddRange(categoriaDAO.buscarTodos(colecao));
+
+            cbCategoria.Items.Clear();
+            cbCategoria.Tag = categorias;
+
+            foreach (Categoria categoria in categorias)
+            {
+                cbCategoria.Items.Add(categoria);
+            }
+            cbCategoria.SelectedItem = catNull;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -96,6 +118,9 @@ namespace ProjetoFinalDS
         {
             item.setNome(txtNome.Text);
             item.setDescricao(txtDescricao.Text);
+            int idxCategoria = cbCategoria.SelectedIndex;
+            Categoria categoria = ((List<Categoria>)cbCategoria.Tag)[idxCategoria];
+            item.setIdCategoria(categoria.getIdCategoria());
             ItemDAO itemDAO = new ItemDAO();
             itemDAO.atualizar(item);
             this.Close();
@@ -126,6 +151,27 @@ namespace ProjetoFinalDS
         private void pbImagem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddCategoria_Click(object sender, EventArgs e)
+        {
+            FrmAddCategoria addCategoria = new FrmAddCategoria(colecao, cbCategoria);
+            addCategoria.ShowDialog();
+        }
+
+        private void btnInserirImagem_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|AllFiles(*.*)|*.*";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                String URLFoto = dialog.FileName.ToString();
+                Image img = Image.FromFile(URLFoto);
+
+                pbImagem.ImageLocation = URLFoto;
+                item.setImagem(img);
+            }
         }
     }
 }

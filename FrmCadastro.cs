@@ -48,6 +48,7 @@ namespace ProjetoFinalDS
             Random rand = new Random();
             int num = rand.Next(4);
             imagemLateral.Image = imagens[num];
+            txtNome.Focus();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -75,7 +76,12 @@ namespace ProjetoFinalDS
                 usuario.setNome(txtNome.Text);
                 usuario.setSenha(txtSenha.Text);
 
-                usuarioDao.cadastrarUsuario(usuario);
+                int idUsuario = usuarioDao.cadastrarUsuario(usuario);
+                usuario.setIdUsuario(idUsuario);
+
+                usuarioDao = new UsuarioDAO();
+                usuario = usuarioDao.buscar(usuario);
+                this.Close();
                 t1 = new Thread(() => abrirColecao(usuario));
                 t1.SetApartmentState(ApartmentState.STA);
                 t1.Start();

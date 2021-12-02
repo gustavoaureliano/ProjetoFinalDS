@@ -35,14 +35,17 @@ namespace ProjetoFinalDS
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.pbImagem = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnInserirImagem = new System.Windows.Forms.Button();
+            this.btnAddCategoria = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbCategoria = new System.Windows.Forms.ComboBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
@@ -110,16 +113,6 @@ namespace ProjetoFinalDS
             this.logo.TabIndex = 3;
             this.logo.TabStop = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(89, 207);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 20);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Descrição";
-            // 
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -138,21 +131,12 @@ namespace ProjetoFinalDS
             this.label5.TabIndex = 31;
             this.label5.Text = "Nome do Item";
             // 
-            // txtDescricao
-            // 
-            this.txtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.Location = new System.Drawing.Point(89, 230);
-            this.txtDescricao.Multiline = true;
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(294, 117);
-            this.txtDescricao.TabIndex = 34;
-            // 
             // pbImagem
             // 
             this.pbImagem.Image = ((System.Drawing.Image)(resources.GetObject("pbImagem.Image")));
-            this.pbImagem.Location = new System.Drawing.Point(540, 155);
+            this.pbImagem.Location = new System.Drawing.Point(507, 171);
             this.pbImagem.Name = "pbImagem";
-            this.pbImagem.Size = new System.Drawing.Size(191, 178);
+            this.pbImagem.Size = new System.Drawing.Size(207, 195);
             this.pbImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImagem.TabIndex = 51;
             this.pbImagem.TabStop = false;
@@ -164,7 +148,7 @@ namespace ProjetoFinalDS
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(522, 121);
+            this.label1.Location = new System.Drawing.Point(503, 138);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 20);
             this.label1.TabIndex = 50;
@@ -177,7 +161,7 @@ namespace ProjetoFinalDS
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSalvar.Location = new System.Drawing.Point(553, 416);
+            this.btnSalvar.Location = new System.Drawing.Point(147, 407);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(178, 42);
             this.btnSalvar.TabIndex = 49;
@@ -192,24 +176,85 @@ namespace ProjetoFinalDS
             this.btnInserirImagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInserirImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserirImagem.ForeColor = System.Drawing.Color.Black;
-            this.btnInserirImagem.Location = new System.Drawing.Point(589, 354);
+            this.btnInserirImagem.Location = new System.Drawing.Point(563, 393);
             this.btnInserirImagem.Name = "btnInserirImagem";
             this.btnInserirImagem.Size = new System.Drawing.Size(97, 27);
             this.btnInserirImagem.TabIndex = 74;
             this.btnInserirImagem.Text = "Inserir foto";
             this.btnInserirImagem.UseVisualStyleBackColor = false;
+            this.btnInserirImagem.Click += new System.EventHandler(this.btnInserirImagem_Click_1);
+            // 
+            // btnAddCategoria
+            // 
+            this.btnAddCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddCategoria.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAddCategoria.FlatAppearance.BorderSize = 0;
+            this.btnAddCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCategoria.ForeColor = System.Drawing.Color.Black;
+            this.btnAddCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCategoria.Image")));
+            this.btnAddCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddCategoria.Location = new System.Drawing.Point(341, 210);
+            this.btnAddCategoria.Name = "btnAddCategoria";
+            this.btnAddCategoria.Size = new System.Drawing.Size(42, 37);
+            this.btnAddCategoria.TabIndex = 85;
+            this.btnAddCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddCategoria.UseVisualStyleBackColor = false;
+            this.btnAddCategoria.Click += new System.EventHandler(this.btnAddCategoria_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(89, 191);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.TabIndex = 84;
+            this.label2.Text = "Categoria";
+            // 
+            // cbCategoria
+            // 
+            this.cbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCategoria.FormattingEnabled = true;
+            this.cbCategoria.Location = new System.Drawing.Point(89, 214);
+            this.cbCategoria.Name = "cbCategoria";
+            this.cbCategoria.Size = new System.Drawing.Size(241, 28);
+            this.cbCategoria.TabIndex = 83;
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricao.Location = new System.Drawing.Point(89, 282);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(294, 89);
+            this.txtDescricao.TabIndex = 82;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(89, 259);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 20);
+            this.label6.TabIndex = 81;
+            this.label6.Text = "Descrição";
             // 
             // FrmEditItem
             // 
+            this.AcceptButton = this.btnSalvar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 491);
+            this.Controls.Add(this.btnAddCategoria);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cbCategoria);
+            this.Controls.Add(this.txtDescricao);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnInserirImagem);
             this.Controls.Add(this.pbImagem);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.txtDescricao);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panelTop);
@@ -235,13 +280,16 @@ namespace ProjetoFinalDS
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.PictureBox pbImagem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnInserirImagem;
+        private System.Windows.Forms.Button btnAddCategoria;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbCategoria;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.Label label6;
     }
 }

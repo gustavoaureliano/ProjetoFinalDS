@@ -156,7 +156,7 @@ namespace ProjetoFinalDS
             this.txtSenha.Location = new System.Drawing.Point(404, 302);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(353, 29);
-            this.txtSenha.TabIndex = 29;
+            this.txtSenha.TabIndex = 3;
             this.txtSenha.UseSystemPasswordChar = true;
             // 
             // lblSenha
@@ -175,7 +175,7 @@ namespace ProjetoFinalDS
             this.txtUsuario.Location = new System.Drawing.Point(404, 230);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(353, 29);
-            this.txtUsuario.TabIndex = 27;
+            this.txtUsuario.TabIndex = 2;
             // 
             // lblUsuario
             // 
@@ -193,7 +193,7 @@ namespace ProjetoFinalDS
             this.txtNome.Location = new System.Drawing.Point(404, 157);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(353, 29);
-            this.txtNome.TabIndex = 31;
+            this.txtNome.TabIndex = 1;
             // 
             // lblNome
             // 
@@ -207,6 +207,7 @@ namespace ProjetoFinalDS
             // 
             // FrmCadastro
             // 
+            this.AcceptButton = this.btnCadastrar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 527);

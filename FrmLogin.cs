@@ -48,6 +48,7 @@ namespace ProjetoFinalDS
             Random rand = new Random();
             int num = rand.Next(6);
             imagemLateral.Image = imagens[num];
+            txtUsuario.Focus();
         }
 
 

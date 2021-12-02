@@ -10,12 +10,12 @@ namespace ProjetoFinalDS.model
     public class Item
     {
 
-        int idItem;
-        int idColecao;
-        int idCategoria;
-        String nome;
-        string descricao;
-        Image imagem;
+        private int idItem;
+        private int idColecao;
+        private int idCategoria;
+        private String nome;
+        private string descricao;
+        private Image imagem;
 
         public int getIdItem()
         {

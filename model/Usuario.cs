@@ -10,11 +10,11 @@ namespace ProjetoFinalDS.model
     public class Usuario
     {
 
-        int idUsuario;
-        String usuario;
-        String nome;
-        String senha;
-        Image imagem;
+        private int idUsuario;
+        private String usuario;
+        private String nome;
+        private String senha;
+        private Image imagem;
 
         public int getIdUsuario()
         {

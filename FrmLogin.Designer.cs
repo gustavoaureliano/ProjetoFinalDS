@@ -74,7 +74,7 @@ namespace ProjetoFinalDS
             this.txtSenha.Location = new System.Drawing.Point(414, 255);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(353, 29);
-            this.txtSenha.TabIndex = 3;
+            this.txtSenha.TabIndex = 2;
             this.txtSenha.UseSystemPasswordChar = true;
             // 
             // lblSenha
@@ -160,7 +160,7 @@ namespace ProjetoFinalDS
             this.lblLinkCadas.Location = new System.Drawing.Point(569, 298);
             this.lblLinkCadas.Name = "lblLinkCadas";
             this.lblLinkCadas.Size = new System.Drawing.Size(61, 16);
-            this.lblLinkCadas.TabIndex = 11;
+            this.lblLinkCadas.TabIndex = 3;
             this.lblLinkCadas.TabStop = true;
             this.lblLinkCadas.Text = "cadastro";
             this.lblLinkCadas.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLinkCadas_LinkClicked);
@@ -220,6 +220,7 @@ namespace ProjetoFinalDS
             // 
             // FrmLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;

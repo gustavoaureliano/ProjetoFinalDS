@@ -123,11 +123,19 @@ namespace ProjetoFinalDS
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Colecao colecao = (Colecao)lvColecoes.SelectedItems[0].Tag;
-            t1 = new Thread(() => abrirEditarColecao(usuario, colecao));
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
+            try
+            {
+                Colecao colecao = (Colecao)lvColecoes.SelectedItems[0].Tag;
+                t1 = new Thread(() => abrirEditarColecao(usuario, colecao));
+                t1.SetApartmentState(ApartmentState.STA);
+                t1.Start();
+                this.Close();
+            } 
+            catch
+            {
+
+            }
+            
         }
 
         private void abrirEditarColecao(Usuario usuario, Colecao colecao)

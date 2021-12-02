@@ -53,15 +53,17 @@ namespace ProjetoFinalDS.dao
         {
             if (conn.State == ConnectionState.Open)
             {
-                String sqlDelete = "delete from categoria where idCategoria = @idCategoria";
+                String sqlDelete = "usp_excluirCategoria";
 
                 MySqlCommand command = new MySqlCommand(sqlDelete, conn);
-                command.Parameters.AddWithValue("@id", categoria.getIdCategoria());
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.AddWithValue("@idCategoria", categoria.getIdCategoria());
 
                 try
                 {
                     int i = command.ExecuteNonQuery();
-                    if (i > 0)
+                    if (i >= 0)
                     {
                         MessageBox.Show("Categoria excluída com sucesso!");
                     }
@@ -78,14 +80,15 @@ namespace ProjetoFinalDS.dao
             }
         }
 
-        public List<Categoria> buscarTodos()
+        public List<Categoria> buscarTodos(Colecao colecao)
         {
             List<Categoria> categorias = new List<Categoria>();
             if (conn.State == ConnectionState.Open)
             {
-                String sqlSelectAll = "select * from categoria";
+                String sqlSelectAll = "select * from categoria where idColecao = @idColecao";
 
                 MySqlCommand command = new MySqlCommand(sqlSelectAll, conn);
+                command.Parameters.AddWithValue("@idColecao", colecao.getIdColecao());
 
                 MySqlDataReader reader;
 
