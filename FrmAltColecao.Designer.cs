@@ -41,6 +41,7 @@ namespace ProjetoFinalDS
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
@@ -176,11 +177,25 @@ namespace ProjetoFinalDS
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(603, 513);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(115, 15);
+            this.linkLabel1.TabIndex = 56;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Voltar Para Coleção";
+            this.linkLabel1.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
             // FrmAltColecao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 561);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.panelTop);
@@ -215,5 +230,6 @@ namespace ProjetoFinalDS
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

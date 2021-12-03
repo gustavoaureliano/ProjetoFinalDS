@@ -125,7 +125,7 @@ namespace ProjetoFinalDS
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(114, 142);
+            this.label1.Location = new System.Drawing.Point(111, 161);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(173, 24);
             this.label1.TabIndex = 66;
@@ -138,7 +138,7 @@ namespace ProjetoFinalDS
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAdd.Location = new System.Drawing.Point(46, 231);
+            this.btnAdd.Location = new System.Drawing.Point(46, 252);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(160, 39);
             this.btnAdd.TabIndex = 70;
@@ -154,7 +154,7 @@ namespace ProjetoFinalDS
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExcluir.Location = new System.Drawing.Point(246, 231);
+            this.btnExcluir.Location = new System.Drawing.Point(246, 252);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(160, 39);
             this.btnExcluir.TabIndex = 71;
@@ -166,7 +166,7 @@ namespace ProjetoFinalDS
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.FormattingEnabled = true;
-            this.txtNome.Location = new System.Drawing.Point(112, 169);
+            this.txtNome.Location = new System.Drawing.Point(115, 188);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(225, 28);
             this.txtNome.TabIndex = 72;
@@ -213,7 +213,7 @@ namespace ProjetoFinalDS
             this.AcceptButton = this.btnAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 314);
+            this.ClientSize = new System.Drawing.Size(449, 326);
             this.Controls.Add(this.rdAdd);
             this.Controls.Add(this.rbEditar);
             this.Controls.Add(this.txtNome);

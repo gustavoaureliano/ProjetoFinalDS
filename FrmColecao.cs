@@ -243,5 +243,10 @@ namespace ProjetoFinalDS
             FrmAddCategoria addCategoria = new FrmAddCategoria(colecao, cbCategoria);
             addCategoria.ShowDialog();
         }
+
+        private void pbUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

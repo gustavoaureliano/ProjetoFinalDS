@@ -113,5 +113,20 @@ namespace ProjetoFinalDS
         {
             Application.Run(new FrmAltColecao(usuario));
         }
+
+        private void btnInserirImagem_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|AllFiles(*.*)|*.*";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                String URLFoto = dialog.FileName.ToString();
+                Image img = Image.FromFile(URLFoto);
+
+                pbImagem.ImageLocation = URLFoto;
+                colecao.setImagem(img);
+            }
+        }
     }
 }

@@ -26,6 +26,7 @@ namespace ProjetoFinalDS
         public static extern bool ReleaseCapture();
 
         Thread t1;
+        Thread t2;
 
         private Usuario usuario;
         public FrmAltColecao(Usuario usuario)
@@ -164,5 +165,6 @@ namespace ProjetoFinalDS
 
             }
         }
+
     }
 }

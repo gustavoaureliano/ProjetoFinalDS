@@ -43,6 +43,7 @@ namespace ProjetoFinalDS
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.PictureBox();
             this.btnInserirImagem = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagem)).BeginInit();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -197,6 +198,20 @@ namespace ProjetoFinalDS
             this.btnInserirImagem.TabIndex = 75;
             this.btnInserirImagem.Text = "Inserir foto";
             this.btnInserirImagem.UseVisualStyleBackColor = false;
+            this.btnInserirImagem.Click += new System.EventHandler(this.btnInserirImagem_Click_1);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(662, 452);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(115, 15);
+            this.linkLabel1.TabIndex = 76;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Voltar Para Coleção";
+            this.linkLabel1.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // FrmEditColecao
             // 
@@ -204,6 +219,7 @@ namespace ProjetoFinalDS
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 491);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnInserirImagem);
             this.Controls.Add(this.pbImagem);
             this.Controls.Add(this.label1);
@@ -243,5 +259,6 @@ namespace ProjetoFinalDS
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Button btnInserirImagem;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

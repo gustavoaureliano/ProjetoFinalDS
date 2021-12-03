@@ -46,6 +46,7 @@ namespace ProjetoFinalDS
             this.label6 = new System.Windows.Forms.Label();
             this.btnAddCategoria = new System.Windows.Forms.Button();
             this.pbImagemItem = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
@@ -57,7 +58,7 @@ namespace ProjetoFinalDS
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(503, 138);
+            this.label1.Location = new System.Drawing.Point(503, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 20);
             this.label1.TabIndex = 60;
@@ -162,7 +163,7 @@ namespace ProjetoFinalDS
             this.btnInserirFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInserirFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserirFoto.ForeColor = System.Drawing.Color.Black;
-            this.btnInserirFoto.Location = new System.Drawing.Point(563, 393);
+            this.btnInserirFoto.Location = new System.Drawing.Point(563, 382);
             this.btnInserirFoto.Name = "btnInserirFoto";
             this.btnInserirFoto.Size = new System.Drawing.Size(97, 27);
             this.btnInserirFoto.TabIndex = 73;
@@ -229,7 +230,7 @@ namespace ProjetoFinalDS
             // pbImagemItem
             // 
             this.pbImagemItem.Image = ((System.Drawing.Image)(resources.GetObject("pbImagemItem.Image")));
-            this.pbImagemItem.Location = new System.Drawing.Point(507, 171);
+            this.pbImagemItem.Location = new System.Drawing.Point(507, 160);
             this.pbImagemItem.Name = "pbImagemItem";
             this.pbImagemItem.Size = new System.Drawing.Size(207, 195);
             this.pbImagemItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -238,12 +239,26 @@ namespace ProjetoFinalDS
             this.pbImagemItem.DragDrop += new System.Windows.Forms.DragEventHandler(this.pbImagemItem_DragDrop);
             this.pbImagemItem.DragEnter += new System.Windows.Forms.DragEventHandler(this.pbImagemItem_DragEnter);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(656, 447);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(112, 15);
+            this.linkLabel1.TabIndex = 81;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Voltar Para os Itens";
+            this.linkLabel1.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
             // FrmAddItem
             // 
             this.AcceptButton = this.btnSalvar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 491);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnAddCategoria);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbCategoria);
@@ -289,5 +304,6 @@ namespace ProjetoFinalDS
         private System.Windows.Forms.ComboBox cbCategoria;
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

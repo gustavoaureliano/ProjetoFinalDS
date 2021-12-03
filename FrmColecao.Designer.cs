@@ -40,6 +40,7 @@ namespace ProjetoFinalDS
             this.panel1 = new System.Windows.Forms.Panel();
             this.lvItens = new System.Windows.Forms.ListView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pbUsuario = new System.Windows.Forms.PictureBox();
             this.lblAbrirColecoes = new System.Windows.Forms.LinkLabel();
             this.txtDataAlteracao = new System.Windows.Forms.Label();
             this.txtDataCriacao = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@ namespace ProjetoFinalDS
             this.btnAddCategoria = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
-            this.pbUsuario = new System.Windows.Forms.PictureBox();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
@@ -181,6 +181,16 @@ namespace ProjetoFinalDS
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(189, 575);
             this.panel2.TabIndex = 60;
+            // 
+            // pbUsuario
+            // 
+            this.pbUsuario.Location = new System.Drawing.Point(12, 35);
+            this.pbUsuario.Name = "pbUsuario";
+            this.pbUsuario.Size = new System.Drawing.Size(54, 54);
+            this.pbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUsuario.TabIndex = 71;
+            this.pbUsuario.TabStop = false;
+            this.pbUsuario.Click += new System.EventHandler(this.pbUsuario_Click);
             // 
             // lblAbrirColecoes
             // 
@@ -353,16 +363,9 @@ namespace ProjetoFinalDS
             this.cbCategoria.TabIndex = 81;
             this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
             // 
-            // pbUsuario
-            // 
-            this.pbUsuario.Location = new System.Drawing.Point(12, 35);
-            this.pbUsuario.Name = "pbUsuario";
-            this.pbUsuario.Size = new System.Drawing.Size(54, 54);
-            this.pbUsuario.TabIndex = 71;
-            this.pbUsuario.TabStop = false;
-            // 
             // FrmColecao
             // 
+            this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 585);
