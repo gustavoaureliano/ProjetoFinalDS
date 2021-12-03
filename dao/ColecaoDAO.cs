@@ -150,7 +150,7 @@ namespace ProjetoFinalDS.dao
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show($"Erro: " + e.ToString());
+                    //MessageBox.Show($"Erro: " + e.ToString());
                 }
                 finally
                 {
