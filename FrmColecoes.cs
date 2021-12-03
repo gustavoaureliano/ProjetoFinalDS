@@ -144,12 +144,17 @@ namespace ProjetoFinalDS
 
         private void lvColecoes_Click(object sender, EventArgs e)
         {
-            Colecao colecao = (Colecao) lvColecoes.SelectedItems[0].Tag;
+            try
+            {
+                Colecao colecao = (Colecao) lvColecoes.SelectedItems[0].Tag;
+                this.Close();
+                t1 = new Thread(() => abriColecao(usuario, colecao));
+                t1.SetApartmentState(ApartmentState.STA);
+                t1.Start();
+            } catch
+            {
 
-            this.Close();
-            t1 = new Thread(() => abriColecao(usuario, colecao));
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
+            }
         }
 
         private void abriColecao(Usuario usuario, Colecao colecao)

@@ -172,8 +172,14 @@ namespace ProjetoFinalDS
 
         private void lvItens_Click(object sender, EventArgs e)
         {
-            Item item = (Item)lvItens.SelectedItems[0].Tag;
-            MessageBox.Show(item.getDescricao(), item.getNome());
+            try
+            {
+                Item item = (Item)lvItens.SelectedItems[0].Tag;
+                MessageBox.Show(item.getDescricao(), item.getNome());
+            } catch
+            {
+
+            }
         }
 
         private void btnDescColecao_Click(object sender, EventArgs e)
